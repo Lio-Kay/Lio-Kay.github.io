@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device‑width, user-scalable=yes, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Ilya Kopkov">
+    <meta name="description" content="Personal site-card to show my competences and projects">
+    <title>About me</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/about_me.css') }}">
+    <link rel="icon" type="image/gif" href="{{ url_for('static', filename='Favicon.gif') }}">
+</head>
+<body>
+<header>
+    <div class="menu">
+        <ul class="menu">
+            <li class="menu_element">
+                <a class="menu_link" href="{{ url_for('home_page')}}">HOME</a>
+            </li>
+            <li class="menu_element">
+                <a class="menu_link" href="{{ url_for('skills')}}">SKILLS</a>
+            </li>
+            <li class="menu_element">
+                <a class="menu_link" href="{{ url_for('projects')}}">PROJECTS</a>
+            </li>
+            <li class="menu_element">
+                <a class="menu_link" href="{{ url_for('to_learn')}}">TO&nbsp;LEARN&nbsp;LIST</a>
+            </li>
+        </ul>
+    </div>
+</header>
+<main>
+    <div class="text_and_img_block">
+        <img class="personal_photo" src="../static/PersonalPhoto720x1280.png" alt="My Photo">
+        <span class="header_primary">
+            <h1>Hi and nice to meet you!</h1>
+        </span>
+        <span class="header_secondary">
+            <h3>My name is Ilya, I also go by the nickname Lio, 25 y/o Python dev from Novosibirsk.
+                I started learning Python not so long ago, but already fallen in love with it and worked on
+                different projects, which I invite you to
+                <a class="text_link" href="{{ url_for('projects')}}" target="_blank"><u>check out.</u></a><br><br> I love working
+                independently, putting all my attention and, perhaps, a piece of my soul into each new project,
+                solving complex problems on my own.<br><br> But I also appreciate the benefits of teamwork -
+                sharing ideas and skills when people come up with different ways to solve problems. That's why
+                I'm always ready listen, discuss and learn. (especially with my trusty cup of tea next to me)</h3>
+        </span>
+    </div>
+</main>
+<footer>
+    <div class="footer">
+        <nav class="footer">
+            <ul class="footer">
+            <li class="footer_element">
+                <img class="footer_link_img" src="../static/footer_logos/TelegramBlack&White300x300.png" alt="Telegram"/>
+                <a class="footer_link" href="https://t.me/Up_n_forward" target="_blank">Telegram</a></li>
+            <li class="footer_element_consecutive">
+                <img class="footer_link_img" src="../static/footer_logos/GmailBlack&White300x300.png" alt="GitHub"/>
+                <a class="footer_link" href="mailto:ilyakopkovwork@gmail.com" target="_blank">Gmail</a></li>
+            <li class="footer_element_consecutive">
+                <img class="footer_link_img" src="../static/footer_logos/GithubBlack$White300x300.png" alt="GitHub"/>
+                <a class="footer_link" href="https://github.com/Lio-Kay" target="_blank">GitHub</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device‑width, user-scalable=yes, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Ilya Kopkov">
+    <meta name="description" content="Personal site-card to show my competences and projects">
+    <title>Projects</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/projects.css') }}">
+    <link rel="icon" type="image/gif" href="../static/Favicon.gif"/>
+</head>
+<body>
+<header>
+    <div class="menu">
+        <ul class="menu">
+            <li class="menu_element">
+                <a class="menu_link" href="{{ url_for('home_page')}}">HOME</a>
+            </li>
+            <li class="menu_element">
+                <a class="menu_link" href="{{ url_for('about_me')}}">ABOUT&nbsp;ME</a>
+            </li>
+            <li class="menu_element">
+                <a class="menu_link" href="{{ url_for('skills')}}">SKILLS</a>
+            </li>
+            <li class="menu_element">
+                <a class="menu_link" href="{{ url_for('to_learn')}}">TO&nbsp;LEARN&nbsp;LIST</a>
+            </li>
+        </ul>
+    </div>
+</header>
+<main>
+    <div class="projects_block">
+        <h2 class="title">MY TOP 3 PROJECTS</h2>
+        <img class="project_1_photo" src="../static/projects_imgs/project1.gif" alt="Project 1 photo">
+            <h3 class="project_1"><a class="footer_link" href="https://github.com/Lio-Kay/GUI_Password_Generator" target="_blank">
+                Password generator with GUI</a><br><br>
+                Project utilizes Tkinter and Ttkbootstrap to provide you with modern looking password
+                generator program that allows you to choose length of generated password from 4 to 20 symbols,
+                select 'Easy to read' (easily distinguishable characters), 'Easy to say' (letters only) options,
+                and separately choose between uppercase, lowercase letters, numbers and symbols.
+                Generated password can be copied on button.
+            </h3>
+        <img class="project_2_photo" src="../static/projects_imgs/project2.gif" alt="Project 2 photo">
+            <h3 class="project_2"><a class="footer_link" href="https://github.com/Lio-Kay/HH_Superjob_API_Parser" target="_blank">
+                Vacancies parser via API</a><br><br>
+                Project utilizes requests library to collect vacancies data from hh.ru and superjob.ru online
+                recruitment platforms. Interaction is CLI based, user can set filters, such as keywords, location
+                pay, employment type and other. After getting list of vacancies he can save them to a .json file and
+                work with saved vacancies later on.
+            </h3>
+        <img class="project_3_photo" src="../static/projects_imgs/project3.png" alt="Project 3 photo">
+            <h3 class="project_3"><a class="footer_link" href="https://github.com/Lio-Kay/Android_Apps_Market_Study" target="_blank">
+                Android apps market study</a><br><br>
+                Project utilizes pandas, matplotlib and seaborn to study big load of data from kaggle about android apps market.
+                User can can get info about most popular genres, apps, median and mean metrics of an app, such as price
+                and size. User can also get data visualisation about different metrics.
+            </h3>
+    </div>
+</main>
+<footer>
+    <div class="footer">
+        <nav class="footer">
+            <ul class="footer">
+            <li class="footer_element">
+                <img class="footer_link_img" src="../static/footer_logos/TelegramBlack&White300x300.png" alt="Telegram"/>
+                <a class="footer_link" href="https://t.me/Up_n_forward" target="_blank">Telegram</a></li>
+            <li class="footer_element_consecutive">
+                <img class="footer_link_img" src="../static/footer_logos/GmailBlack&White300x300.png" alt="GitHub"/>
+                <a class="footer_link" href="mailto:ilyakopkovwork@gmail.com" target="_blank">Gmail</a></li>
+            <li class="footer_element_consecutive">
+                <img class="footer_link_img" src="../static/footer_logos/GithubBlack$White300x300.png" alt="GitHub"/>
+                <a class="footer_link" href="https://github.com/Lio-Kay" target="_blank">GitHub</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device‑width, user-scalable=yes, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Ilya Kopkov">
+    <meta name="description" content="Personal site-card to show my competences and projects">
+    <title>About me</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/to_learn.css') }}">
+    <link rel="icon" type="image/gif" href="{{ url_for('static', filename='Favicon.gif') }}">
+</head>
+<body>
+<header>
+    <div class="menu">
+        <ul class="menu">
+            <li class="menu_element">
+                <a class="menu_link" href="{{ url_for('home_page')}}">HOME</a>
+            </li>
+            <li class="menu_element">
+                <a class="menu_link" href="{{ url_for('about_me')}}">ABOUT&nbsp;ME</a>
+            </li>
+            <li class="menu_element">
+                <a class="menu_link" href="{{ url_for('skills')}}">SKILLS</a>
+            </li>
+            <li class="menu_element">
+                <a class="menu_link" href="{{ url_for('projects')}}">PROJECTS</a>
+            </li>
+        </ul>
+    </div>
+</header>
+<main>
+    <div class="text_block">
+        <h2>Here's what I'm planning to learn and why</h2>
+        <h3>• <u>Asynchronous programming</u> and framework for it, most likely the <u>AIOHTTP</u>. I understand issues that
+            come with GIL, especially now, when  task performance is more often I/O bound.<br><br>
+            • <u>Redis</u>, because I need an instrument to cache web pages, reducing load on servers
+            and facilitating communication between different parts of an application.<br><br>
+            • <u>Nginx</u>, since it's the fastest HTTP server and the best way to manage traffic
+            while providing cashing.<br><br>
+            • Deeper knowledge of <u>CSS</u>. because I want to be able to create functional and decently
+            looking web pages on my own<br><br>
+            • Fundamentals of <u>JS</u>, same as CSS and also just because I want to check out
+            different languages.<br><br>
+            • Deeper knowledge of <u>CS</u> (Data Structures, Algorithms), since big O still matters in some
+            fields and this knowledge helps write code with scalability in mind.<br><br>
+            • And when I am ready - a <u>middle-level language</u>, like C or Java, for
+            better performance and deeper understanding of how programs work<br><br>
+        </h3>
+    </div>
+</main>
+<footer>
+    <div class="footer">
+        <nav class="footer">
+            <ul class="footer">
+            <li class="footer_element">
+                <img class="footer_link_img" src="../static/footer_logos/TelegramBlack&White300x300.png" alt="Telegram"/>
+                <a class="footer_link" href="https://t.me/Up_n_forward" target="_blank">Telegram</a></li>
+            <li class="footer_element_consecutive">
+                <img class="footer_link_img" src="../static/footer_logos/GmailBlack&White300x300.png" alt="GitHub"/>
+                <a class="footer_link" href="mailto:ilyakopkovwork@gmail.com" target="_blank">Gmail</a></li>
+            <li class="footer_element_consecutive">
+                <img class="footer_link_img" src="../static/footer_logos/GithubBlack$White300x300.png" alt="GitHub"/>
+                <a class="footer_link" href="https://github.com/Lio-Kay" target="_blank">GitHub</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device‑width, user-scalable=yes, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Ilya Kopkov">
+    <meta name="description" content="Personal site-card to show my competences and projects">
+    <title>Home page</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home_page.css') }}">
+    <link rel="icon" type="image/gif" href="{{ url_for('static', filename='Favicon.gif') }}">
+</head>
+<body>
+<header>
+    <div class="menu">
+        <ul class="menu">
+            <li class="menu_element">
+                <a class="menu_link" href="{{ url_for('about_me')}}">ABOUT&nbsp;ME</a>
+            </li>
+            <li class="menu_element">
+                <a class="menu_link" href="{{ url_for('skills')}}">SKILLS</a>
+            </li>
+            <li class="menu_element">
+                <a class="menu_link" href="{{ url_for('projects')}}">PROJECTS</a>
+            </li>
+            <li class="menu_element">
+                <a class="menu_link" href="{{ url_for('to_learn')}}">TO&nbsp;LEARN&nbsp;LIST</a>
+            </li>
+        </ul>
+    </div>
+</header>
+<main>
+    <span class="header_primary">
+        <h1>Ilya Kopkov</h1>
+    </span>
+    <span class="header_secondary">
+        <h3>Welcome to my business card site, <br> I am a Python dev who aspires to <br>
+            master backend development</h3>
+    </span>
+</main>
+<footer>
+    <div class="footer">
+        <nav class="footer">
+            <ul class="footer">
+            <li class="footer_element">
+                <img class="footer_link_img" src="static/footer_logos/TelegramBlack&White300x300.png" alt="Telegram"/>
+                <a class="footer_link" href="https://t.me/Up_n_forward" target="_blank">Telegram</a></li>
+            <li class="footer_element_consecutive">
+                <img class="footer_link_img" src="static/footer_logos/GmailBlack&White300x300.png" alt="GitHub"/>
+                <a class="footer_link" href="mailto:ilyakopkovwork@gmail.com" target="_blank">Gmail</a></li>
+            <li class="footer_element_consecutive">
+                <img class="footer_link_img" src="static/footer_logos/GithubBlack$White300x300.png" alt="GitHub"/>
+                <a class="footer_link" href="https://github.com/Lio-Kay" target="_blank">GitHub</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+</body>
+</html>
