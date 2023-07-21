@@ -8,24 +8,24 @@
     <meta name="author" content="Ilya Kopkov">
     <meta name="description" content="Personal site-card to show my competences and projects">
     <title>About me</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/about_me.css') }}">
-    <link rel="icon" type="image/gif" href="{{ url_for('static', filename='Favicon.gif') }}">
+    <link rel="stylesheet" type="text/css" href="static/css/about_me.css">
+    <link rel="icon" type="image/gif" href="static/Favicon.gif">
 </head>
 <body>
 <header>
     <div class="menu">
         <ul class="menu">
             <li class="menu_element">
-                <a class="menu_link" href="{{ url_for('home_page')}}">HOME</a>
+                <a class="menu_link" href="index.html">HOME</a>
             </li>
             <li class="menu_element">
-                <a class="menu_link" href="{{ url_for('skills')}}">SKILLS</a>
+                <a class="menu_link" href="skills.html">SKILLS</a>
             </li>
             <li class="menu_element">
-                <a class="menu_link" href="{{ url_for('projects')}}">PROJECTS</a>
+                <a class="menu_link" href="projects.html">PROJECTS</a>
             </li>
             <li class="menu_element">
-                <a class="menu_link" href="{{ url_for('to_learn')}}">TO&nbsp;LEARN&nbsp;LIST</a>
+                <a class="menu_link" href="to_learn.html">TO LEARN LIST</a>
             </li>
         </ul>
     </div>
