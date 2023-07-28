@@ -922,7 +922,7 @@ a:hover {color: rgba(178, 49, 66, 0.95)}
 a:focus {color: rgba(178, 49, 66, 0.95)}
 a:active {color: rgba(130, 159, 198, 0.95)}
 html {
-background-image: url('../bg_image.webp');
+background-image: url('../bg_img.webp');
 background-color: gray;
 background-attachment: fixed;
 background-size: cover;
