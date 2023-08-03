@@ -67,17 +67,19 @@ background-color: rgba(0, 0, 0, 0.5);
     }}
 
 img.personal_photo{
-padding: 2vw 0 0 2vw;
+margin: 2vw 0 0 2vw;
 width: 20vw;
 height: 32vw;
 float: left;
+border-radius: 10px;
 }
     @media screen and (max-width: 500px){
     img.personal_photo{
-    padding: 4vw 3vw 0 3vw;
+    margin: 4vw 3vw 0 3vw;
     width: 30vw;
     height: 48vw;
     float: left;
+    border-radius: 10px;
     }}
 
 span.header_primary {
