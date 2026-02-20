@@ -45,14 +45,19 @@ body {
   backdrop-filter: blur(4px);
 }
 
+.nav-wrap {
+  padding: 0.35rem 0;
+}
+
 .nav-list {
   margin: 0;
-  padding: 1rem;
+  padding: 0;
   list-style: none;
   display: flex;
   gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
+  line-height: 1.2;
 }
 
 .container {
@@ -128,8 +133,8 @@ h2 {
 }
 
 .projects-carousel-wrap {
-  position: relative;
-  padding: 0 2.6rem;
+  display: grid;
+  gap: 0.8rem;
 }
 
 .projects-carousel {
@@ -180,19 +185,11 @@ h2 {
   box-shadow: 0 10px 20px rgba(15, 76, 129, 0.28);
 }
 
-.side-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1;
-}
-
-.side-btn[data-direction="prev"] {
-  left: 0;
-}
-
-.side-btn[data-direction="next"] {
-  right: 0;
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
 }
 
 ul {
@@ -238,27 +235,7 @@ a:focus {
   }
 
   .projects-carousel-wrap {
-    padding: 0;
-    display: grid;
-    gap: 0.75rem;
-  }
-
-  .side-btn {
-    position: static;
-    transform: none;
-    justify-self: center;
-  }
-
-  .side-btn[data-direction="prev"] {
-    order: 2;
-  }
-
-  .side-btn[data-direction="next"] {
-    order: 3;
-  }
-
-  .projects-carousel {
-    order: 1;
+    gap: 0.7rem;
   }
 
   .contact-list span {
