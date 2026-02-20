@@ -25,10 +25,10 @@
    <main id="main-content" class="container">
      <section id="hero" aria-labelledby="hero-title" class="hero-grid">
        <div>
-         <h1 id="hero-title">👋 Hey, I’m Ilya</br>Backend engineer building scalable, data-intensive systems.</h1>
+         <h1 id="hero-title">👋 Hey, I’m Ilya</br></br>Backend engineer building scalable, data-intensive systems</h1>
          <p class="hero-subtitle">
            I like turning messy requirements into clean APIs, stable data models,
-           and services that stay fast under pressure.
+           and services that stay fast under pressure
          </p>
        </div>
        <figure class="hero-photo-template">
@@ -45,25 +45,35 @@
          </div>
        </div>
        <div class="projects-carousel" role="region" aria-label="Project slider" tabindex="0">
+          <article class="project-card">
+            <h3>E-commerce & Yandex Delivery Integration</h3>
+              <p><strong>Why it exists:</strong> Enable online ordering and delivery for a federal drug store chain through marketplace and delivery partners.</p>
+              <p><strong>How it works:</strong> Backend service integrating internal order system with Yandex Delivery API; handled order status synchronization, delivery updates, and failure retries via RabbitMQ workers. Designed to tolerate inconsistent external callbacks and network errors.</p>
+              <p><strong>Tech used:</strong> Python, Django, PostgreSQL, RabbitMQ, REST APIs.</p>
+          </article>
+          <article class="project-card">
+            <h3>Retail Data Warehouse (OLTP → DWH)</h3>
+              <p><strong>Why it exists:</strong> Provide management and regional offices with consolidated sales, stock, and pharmacy performance reports.</p>
+              <p><strong>How it works:</strong> PostgreSQL-based DWH with multiple large fact tables (400M+ rows). Partitioning applied to manage growth. Complex SQL (CTEs, aggregates, window functions) used for reporting and monthly financial reconciliation.</p>
+              <p><strong>Tech used:</strong> PostgreSQL, SQL, Python.</p>
+          </article>
+          <article class="project-card">
+            <h3>ERP & Legacy System Integration</h3>
+              <p><strong>Why it exists:</strong> Synchronize product catalog, pricing, and stock data between legacy Java-based systems and new Python services.</p>
+              <p><strong>How it works:</strong> Gradual migration from Java modules to Python services; API-based communication and async processing via RabbitMQ to avoid blocking critical retail operations.</p>
+              <p><strong>Tech used:</strong> Python, Java (legacy), PostgreSQL, RabbitMQ.</p>
+          </article>
          <article class="project-card">
-           <h3>Payments Gateway API</h3>
-           <p><strong>Why it exists:</strong> One API to process payments, retries, and callbacks from multiple providers.</p>
-           <p><strong>How it works:</strong> FastAPI backend + PostgreSQL + RabbitMQ workers.</p>
-           <p><strong>Tech used:</strong> Python, FastAPI, PostgreSQL, RabbitMQ, Docker.</p>
+            <h3>Web Data Parsing & Competitor Monitoring</h3>
+              <p><strong>Why it exists:</strong> Collect competitor pricing and product availability data for analytics and pricing adjustments.</p>
+              <p><strong>How it works:</strong> Automated parsing tools with scheduled runs; data cleaned and loaded into internal reporting systems. Focused on resilience against layout changes and incomplete data.</p>
+              <p><strong>Tech used:</strong> Python, BeautifulSoup, PostgreSQL.</p>
          </article>
- 
          <article class="project-card">
-           <h3>Inventory Sync Service</h3>
-           <p><strong>Why it exists:</strong> Keep stock levels consistent across ERP, warehouse, and storefront.</p>
-           <p><strong>How it works:</strong> REST core + event stream + idempotent async consumers.</p>
-           <p><strong>Tech used:</strong> Python, Django, PostgreSQL, Kafka, Celery.</p>
-         </article>
- 
-         <article class="project-card">
-           <h3>OLTP -> DWH Pipeline</h3>
-           <p><strong>Why it exists:</strong> Move transactional data to analytics with data-quality checks.</p>
-           <p><strong>How it works:</strong> Scheduled ETL + staging + warehouse marts + observability.</p>
-           <p><strong>Tech used:</strong> Python, SQL, Airflow, PostgreSQL, dbt.</p>
+           <h3>Infrastructure & Server Configuration</h3>
+             <p><strong>Why it exists:</strong> Maintain stable deployment and operation of backend services across staging and production environments.</p>
+             <p><strong>How it works:</strong> Dockerized services; server configuration and monitoring setup; ensured reliable deployments and minimized downtime during updates.</p>
+             <p><strong>Tech used:</strong> Docker, Linux, Nginx, PostgreSQL.</p>
          </article>
        </div>
      </section>
