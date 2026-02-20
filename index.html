@@ -1,61 +1,123 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device‑width, user-scalable=yes, initial-scale=1, maximum-scale=1, minimum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="author" content="Ilya Kopkov">
-    <meta name="description" content="Personal site-card to show my competences and projects">
-    <title>Home page</title>
-    <link rel="stylesheet" type="text/css" href="static/css/index.css">
-    <link rel="icon" type="image/gif" href="static/Favicon.gif'">
-    <Cache-Control: max-age=31536000></Cache-Control:>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Ilya Kopkov">
+  <meta name="description" content="Ilya Kopkov — backend engineer building reliable and scalable data systems.">
+  <title>Ilya Kopkov | Backend Engineer</title>
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="icon" type="image/gif" href="static/Favicon.gif">
 </head>
 <body>
-<header>
-    <div class="menu">
-        <ul class="menu">
-            <li class="menu_element">
-                <a class="menu_link" href="about_me.html">ABOUT ME</a>
-            </li>
-            <li class="menu_element">
-                <a class="menu_link" href="skills.html">SKILLS</a>
-            </li>
-            <li class="menu_element">
-                <a class="menu_link" href="projects.html">PROJECTS</a>
-            </li>
-            <li class="menu_element">
-                <a class="menu_link" href="to_learn.html">TO LEARN LIST</a>
-            </li>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <nav aria-label="Primary navigation" class="container nav-wrap">
+      <ul class="nav-list">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#focus">Technical Focus</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content" class="container">
+    <section id="hero" aria-labelledby="hero-title" class="hero-grid">
+      <div>
+        <p class="eyebrow">👋 Hey, I’m Ilya</p>
+        <h1 id="hero-title">Backend engineer building scalable, data-intensive systems.</h1>
+        <p class="hero-subtitle">
+          I like turning messy requirements into clean APIs, stable data models,
+          and services that stay fast under pressure.
+        </p>
+      </div>
+      <figure class="hero-photo-template">
+        <img src="static/PersonalPhoto720x1280.webp" alt="Profile photo template">
+        <figcaption>📸 Profile photo template</figcaption>
+      </figure>
+    </section>
+
+    <section id="projects" aria-labelledby="projects-title">
+      <div class="projects-header">
+        <h2 id="projects-title">🚀 Projects</h2>
+        <div class="projects-controls" aria-label="Project carousel controls">
+          <button type="button" class="carousel-btn" data-direction="prev" aria-label="Previous project">◀ Prev</button>
+          <button type="button" class="carousel-btn" data-direction="next" aria-label="Next project">Next ▶</button>
+        </div>
+      </div>
+      <p class="section-note">Use the buttons, trackpad, or swipe on mobile.</p>
+
+      <div class="projects-carousel" role="region" aria-label="Projects carousel" tabindex="0">
+        <article class="project-card">
+          <h3>Payments Gateway API</h3>
+          <p><strong>Purpose:</strong> One API to process payments, retries, and callbacks from multiple providers.</p>
+          <p><strong>Architecture:</strong> FastAPI backend + PostgreSQL + RabbitMQ workers.</p>
+          <p><strong>Stack:</strong> Python, FastAPI, PostgreSQL, RabbitMQ, Docker.</p>
+        </article>
+
+        <article class="project-card">
+          <h3>Inventory Sync Service</h3>
+          <p><strong>Purpose:</strong> Keep stock levels consistent across ERP, warehouse, and storefront.</p>
+          <p><strong>Architecture:</strong> REST core + event stream + idempotent async consumers.</p>
+          <p><strong>Stack:</strong> Python, Django, PostgreSQL, Kafka, Celery.</p>
+        </article>
+
+        <article class="project-card">
+          <h3>OLTP → DWH Pipeline</h3>
+          <p><strong>Purpose:</strong> Move transactional data to analytics with data-quality checks.</p>
+          <p><strong>Architecture:</strong> Scheduled ETL + staging + warehouse marts + observability.</p>
+          <p><strong>Stack:</strong> Python, SQL, Airflow, PostgreSQL, dbt.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="focus" aria-labelledby="focus-title">
+      <h2 id="focus-title">🛠️ Technical Focus</h2>
+      <ul>
+        <li>Scalable REST API design and service decomposition.</li>
+        <li>PostgreSQL performance tuning, schema design, and data modeling.</li>
+        <li>Async and event-driven backend workflows.</li>
+        <li>OLTP to DWH pipeline design for analytics and reporting.</li>
+      </ul>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">🤝 Contact</h2>
+      <address>
+        <ul class="contact-list">
+          <li><span>LinkedIn</span><a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">linkedin.com/in/your-profile</a></li>
+          <li><span>Email</span><a href="mailto:ilyakopkovwork@gmail.com">ilyakopkovwork@gmail.com</a></li>
+          <li><span>Telegram</span><a href="https://t.me/Up_n_forward" target="_blank" rel="noopener noreferrer">@Up_n_forward</a></li>
+          <li><span>Website</span><a href="https://lio-kay.github.io" target="_blank" rel="noopener noreferrer">lio-kay.github.io</a></li>
         </ul>
-    </div>
-</header>
-<main>
-    <span class="header_primary">
-        <h1>Ilya Kopkov</h1>
-    </span>
-    <span class="header_secondary">
-        <h3>Welcome to my business card site, <br> I am a Python dev who aspires to <br>
-            master backend development</h3>
-    </span>
-</main>
-<footer>
-    <div class="footer">
-        <nav class="footer">
-            <ul class="footer">
-            <li class="footer_element">
-                <img class="footer_link_img" src="static/footer_logos/TelegramBlack&White300x300.webp" alt="Telegram"/>
-                <a class="footer_link" href="https://t.me/Up_n_forward" target="_blank">Telegram</a></li>
-            <li class="footer_element_consecutive">
-                <img class="footer_link_img" src="static/footer_logos/GmailBlack&White300x300.webp" alt="GitHub"/>
-                <a class="footer_link" href="mailto:ilyakopkovwork@gmail.com" target="_blank">Gmail</a></li>
-            <li class="footer_element_consecutive">
-                <img class="footer_link_img" src="static/footer_logos/GithubBlack$White300x300.webp" alt="GitHub"/>
-                <a class="footer_link" href="https://github.com/Lio-Kay" target="_blank">GitHub</a></li>
-            </ul>
-        </nav>
-    </div>
-</footer>
+      </address>
+    </section>
+  </main>
+
+  <script>
+    const carousel = document.querySelector('.projects-carousel');
+    const buttons = document.querySelectorAll('.carousel-btn');
+
+    if (carousel && buttons.length) {
+      const move = (direction) => {
+        const card = carousel.querySelector('.project-card');
+        if (!card) return;
+
+        const styles = window.getComputedStyle(carousel);
+        const gap = parseFloat(styles.columnGap || styles.gap || '0');
+        const shift = card.getBoundingClientRect().width + gap;
+        carousel.scrollBy({ left: direction * shift, behavior: 'smooth' });
+      };
+
+      buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+          const direction = button.dataset.direction === 'next' ? 1 : -1;
+          move(direction);
+        });
+      });
+    }
+  </script>
 </body>
 </html>
