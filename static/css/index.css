@@ -127,6 +127,11 @@ h2 {
   color: var(--muted);
 }
 
+.projects-carousel-wrap {
+  position: relative;
+  padding: 0 2.6rem;
+}
+
 .projects-carousel {
   display: grid;
   grid-auto-flow: column;
@@ -135,6 +140,16 @@ h2 {
   overflow-x: auto;
   padding-bottom: 0.25rem;
   scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+}
+
+.projects-carousel::-webkit-scrollbar {
+  height: 8px;
+}
+
+.projects-carousel::-webkit-scrollbar-thumb {
+  background: #bcc9d8;
+  border-radius: 999px;
 }
 
 .project-card {
@@ -143,6 +158,41 @@ h2 {
   padding: 1rem;
   background: var(--surface-soft);
   scroll-snap-align: start;
+}
+
+.carousel-btn {
+  width: 2.4rem;
+  height: 2.4rem;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #ffffff 0%, #e8eef5 100%);
+  color: var(--accent);
+  font-size: 1.7rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(15, 76, 129, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.carousel-btn:hover,
+.carousel-btn:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(15, 76, 129, 0.28);
+}
+
+.side-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.side-btn[data-direction="prev"] {
+  left: 0;
+}
+
+.side-btn[data-direction="next"] {
+  right: 0;
 }
 
 ul {
@@ -185,6 +235,30 @@ a:focus {
 
   section {
     padding: 1rem;
+  }
+
+  .projects-carousel-wrap {
+    padding: 0;
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .side-btn {
+    position: static;
+    transform: none;
+    justify-self: center;
+  }
+
+  .side-btn[data-direction="prev"] {
+    order: 2;
+  }
+
+  .side-btn[data-direction="next"] {
+    order: 3;
+  }
+
+  .projects-carousel {
+    order: 1;
   }
 
   .contact-list span {
