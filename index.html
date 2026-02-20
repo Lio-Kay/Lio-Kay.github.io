@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Ilya Kopkov">
-  <meta name="description" content="Ilya Kopkov — backend engineer building reliable and scalable data systems.">
+  <meta name="description" content="Personal landing page for a backend engineer focused on scalable, data-intensive systems.">
   <title>Ilya Kopkov | Backend Engineer</title>
   <link rel="stylesheet" href="static/css/index.css">
   <link rel="icon" type="image/gif" href="static/Favicon.gif">
@@ -13,7 +13,7 @@
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <header class="site-header">
-    <nav aria-label="Primary navigation" class="container nav-wrap">
+    <nav aria-label="Primary navigation">
       <ul class="nav-list">
         <li><a href="#hero">Home</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -26,55 +26,49 @@
   <main id="main-content" class="container">
     <section id="hero" aria-labelledby="hero-title" class="hero-grid">
       <div>
-        <p class="eyebrow">👋 Hey, I’m Ilya</p>
-        <h1 id="hero-title">Backend engineer building scalable, data-intensive systems.</h1>
-        <p class="hero-subtitle">
-          I like turning messy requirements into clean APIs, stable data models,
-          and services that stay fast under pressure.
+        <h1 id="hero-title">Ilya Kopkov</h1>
+        <p class="hero-subtitle">Backend engineer building scalable, data-intensive systems</p>
+        <p>
+          I design and deliver reliable backend platforms with a focus on maintainability,
+          performance, and clear operational visibility.
         </p>
       </div>
       <figure class="hero-photo-template">
         <img src="static/PersonalPhoto720x1280.webp" alt="Profile photo template">
-        <figcaption>📸 Profile photo template</figcaption>
+        <figcaption>Profile photo template</figcaption>
       </figure>
     </section>
 
     <section id="projects" aria-labelledby="projects-title">
-      <div class="projects-header">
-        <h2 id="projects-title">🚀 Projects</h2>
-        <div class="projects-controls" aria-label="Project carousel controls">
-          <button type="button" class="carousel-btn" data-direction="prev" aria-label="Previous project">◀ Prev</button>
-          <button type="button" class="carousel-btn" data-direction="next" aria-label="Next project">Next ▶</button>
-        </div>
-      </div>
-      <p class="section-note">Use the buttons, trackpad, or swipe on mobile.</p>
+      <h2 id="projects-title">Projects</h2>
+      <p class="section-note">Template cards — swipe on mobile or scroll horizontally.</p>
 
-      <div class="projects-carousel" role="region" aria-label="Projects carousel" tabindex="0">
+      <div class="projects-carousel" role="region" aria-label="Projects carousel">
         <article class="project-card">
-          <h3>Payments Gateway API</h3>
-          <p><strong>Purpose:</strong> One API to process payments, retries, and callbacks from multiple providers.</p>
-          <p><strong>Architecture:</strong> FastAPI backend + PostgreSQL + RabbitMQ workers.</p>
-          <p><strong>Stack:</strong> Python, FastAPI, PostgreSQL, RabbitMQ, Docker.</p>
+          <h3>Project Short Name</h3>
+          <p><strong>Purpose:</strong> Brief summary of the business or technical goal this project solves.</p>
+          <p><strong>Architecture:</strong> Backend service + PostgreSQL + messaging/queue integration.</p>
+          <p><strong>Stack:</strong> Python, FastAPI, PostgreSQL, Redis, RabbitMQ, Docker.</p>
         </article>
 
         <article class="project-card">
-          <h3>Inventory Sync Service</h3>
-          <p><strong>Purpose:</strong> Keep stock levels consistent across ERP, warehouse, and storefront.</p>
-          <p><strong>Architecture:</strong> REST core + event stream + idempotent async consumers.</p>
-          <p><strong>Stack:</strong> Python, Django, PostgreSQL, Kafka, Celery.</p>
+          <h3>Project Short Name</h3>
+          <p><strong>Purpose:</strong> Brief summary of the business or technical goal this project solves.</p>
+          <p><strong>Architecture:</strong> API service + OLTP DB + async workers + events.</p>
+          <p><strong>Stack:</strong> Python, Django/FastAPI, PostgreSQL, Kafka, Celery.</p>
         </article>
 
         <article class="project-card">
-          <h3>OLTP → DWH Pipeline</h3>
-          <p><strong>Purpose:</strong> Move transactional data to analytics with data-quality checks.</p>
-          <p><strong>Architecture:</strong> Scheduled ETL + staging + warehouse marts + observability.</p>
-          <p><strong>Stack:</strong> Python, SQL, Airflow, PostgreSQL, dbt.</p>
+          <h3>Project Short Name</h3>
+          <p><strong>Purpose:</strong> Brief summary of the business or technical goal this project solves.</p>
+          <p><strong>Architecture:</strong> ETL backend + warehouse loading + monitoring.</p>
+          <p><strong>Stack:</strong> Python, SQL, Airflow, PostgreSQL, dbt, Docker.</p>
         </article>
       </div>
     </section>
 
     <section id="focus" aria-labelledby="focus-title">
-      <h2 id="focus-title">🛠️ Technical Focus</h2>
+      <h2 id="focus-title">Technical Focus</h2>
       <ul>
         <li>Scalable REST API design and service decomposition.</li>
         <li>PostgreSQL performance tuning, schema design, and data modeling.</li>
@@ -84,40 +78,16 @@
     </section>
 
     <section id="contact" aria-labelledby="contact-title">
-      <h2 id="contact-title">🤝 Contact</h2>
+      <h2 id="contact-title">Contact</h2>
       <address>
         <ul class="contact-list">
-          <li><span>LinkedIn</span><a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">linkedin.com/in/your-profile</a></li>
-          <li><span>Email</span><a href="mailto:ilyakopkovwork@gmail.com">ilyakopkovwork@gmail.com</a></li>
-          <li><span>Telegram</span><a href="https://t.me/Up_n_forward" target="_blank" rel="noopener noreferrer">@Up_n_forward</a></li>
-          <li><span>Website</span><a href="https://lio-kay.github.io" target="_blank" rel="noopener noreferrer">lio-kay.github.io</a></li>
+          <li><span>LinkedIn:</span> <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">linkedin.com/in/your-profile</a></li>
+          <li><span>Email:</span> <a href="mailto:ilyakopkovwork@gmail.com">ilyakopkovwork@gmail.com</a></li>
+          <li><span>Telegram:</span> <a href="https://t.me/Up_n_forward" target="_blank" rel="noopener noreferrer">@Up_n_forward</a></li>
+          <li><span>Website:</span> <a href="https://lio-kay.github.io" target="_blank" rel="noopener noreferrer">lio-kay.github.io</a></li>
         </ul>
       </address>
     </section>
   </main>
-
-  <script>
-    const carousel = document.querySelector('.projects-carousel');
-    const buttons = document.querySelectorAll('.carousel-btn');
-
-    if (carousel && buttons.length) {
-      const move = (direction) => {
-        const card = carousel.querySelector('.project-card');
-        if (!card) return;
-
-        const styles = window.getComputedStyle(carousel);
-        const gap = parseFloat(styles.columnGap || styles.gap || '0');
-        const shift = card.getBoundingClientRect().width + gap;
-        carousel.scrollBy({ left: direction * shift, behavior: 'smooth' });
-      };
-
-      buttons.forEach((button) => {
-        button.addEventListener('click', () => {
-          const direction = button.dataset.direction === 'next' ? 1 : -1;
-          move(direction);
-        });
-      });
-    }
-  </script>
 </body>
 </html>
