@@ -166,15 +166,18 @@ h2 {
 }
 
 .project-card a {
-  display: inline-block;
+  display: block;
   margin-top: 0.75rem;
-  padding: 0.4rem 1.1rem;
+  padding: 0.5rem 1.1rem;
   background-color: var(--accent);
   color: #ffffff;
   border-radius: 6px;
   font-size: 0.9rem;
   font-weight: 600;
   text-decoration: none;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
   transition: opacity 0.15s ease, transform 0.15s ease;
 }
 
