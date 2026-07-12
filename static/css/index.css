@@ -19,7 +19,7 @@ body {
   background: var(--bg);
   color: var(--text);
   line-height: 1.5;
-  font-size: 0.93rem;
+  font-size: 0.84rem;
 }
 
 .skip-link {
@@ -46,38 +46,32 @@ body {
   backdrop-filter: blur(4px);
 }
 
+.nav-wrap {
+  padding: 1.5rem 0;
+}
+
 .nav-list {
   margin: 0;
   padding: 0;
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 2.5rem;
   justify-content: center;
   flex-wrap: wrap;
   line-height: 1.2;
 }
 
-.nav-wrap {
-  padding: 0.75rem 0;
-}
-
 .nav-list a {
-  font-size: 1.05rem;
+  font-size: 1.4rem;
   font-weight: 500;
 }
 
-.container {
-  max-width: 860px;
-  margin: 0 auto;
-  padding: 0.15rem 0.85rem 0.15rem;
-}
-
 section {
-  margin-bottom: 1rem;
+  margin-bottom: 0.9rem;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 12px;
-  padding: 1.1rem;
+  padding: 1rem;
   box-shadow: var(--shadow);
 }
 
@@ -112,22 +106,22 @@ section {
 }
 
 h1 {
-  font-size: clamp(1.5rem, 3.5vw, 2.3rem);
-  margin-bottom: 0.3rem;
+  font-size: clamp(1.35rem, 3.15vw, 2.07rem);
+  margin-bottom: 0.27rem;
 }
 
 h2 {
-  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-  margin-bottom: 0.5rem;
+  font-size: clamp(1rem, 2.25vw, 1.26rem);
+  margin-bottom: 0.45rem;
 }
 
 h3 {
-  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  font-size: clamp(0.86rem, 1.8vw, 0.99rem);
 }
 
 .hero-subtitle {
-  margin: 0.25rem 0 0.75rem;
-  font-size: clamp(0.85rem, 2vw, 1.05rem);
+  margin: 0.22rem 0 0.67rem;
+  font-size: clamp(0.76rem, 1.8vw, 0.94rem);
   color: var(--muted);
 }
 
@@ -164,7 +158,7 @@ h3 {
 .project-card {
   border: 1px solid var(--border);
   border-radius: 10px;
-  padding: 0.85rem;
+  padding: 0.76rem;
   background: var(--surface-soft);
   scroll-snap-align: start;
 }
