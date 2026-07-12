@@ -46,7 +46,7 @@
       <div class="projects-carousel-wrap">
         <div class="projects-carousel" role="region" aria-label="Project slider" tabindex="0">
           <article class="project-card">
-            <h3>Multi-Broker Data Platform — Portfolio Project (2026)</h3>
+            <h3>Multi-Broker Data Platform (2026)</h3>
             <p><strong>Why it exists:</strong> Demonstrate end-to-end data engineering depth: automated multi-source ingestion, medallion warehouse architecture, dbt-based transformation, and a live BI layer — built production-style from scratch.</p>
             <p><strong>How it works:</strong> Three public APIs (CoinGecko, US Treasury, GitHub Events) feed raw data into a PostgreSQL Bronze layer via Apache Airflow. dbt models (orchestrated via Astronomer Cosmos) transform data through Silver and Gold layers using window functions, incremental strategies, and star-schema dimensional modeling. Downstream: a FastAPI read layer serves Gold table data as JSON endpoints; Metabase dashboards connect directly to the Gold schema for live BI reporting. Asset-based cascade triggering ensures Silver and Gold transforms only fire after successful upstream ingestion — no blind temporal scheduling.</p>
             <p><strong>Tech used:</strong> Python, Apache Airflow 3, dbt Core, Astronomer Cosmos, PostgreSQL 16, FastAPI, SQLAlchemy Core, Metabase, Docker.</p>
@@ -54,33 +54,27 @@
           </article>
           <article class="project-card">
             <h3>E-commerce & Yandex Delivery Integration (2024-2026)</h3>
-            <p><strong>Why it exists:</strong> Enable online ordering and delivery for a federal drug store chain through marketplace and delivery partners.</p>
-            <p><strong>How it works:</strong> Backend service integrating internal order system with Yandex Delivery API; handled order status synchronization, delivery updates, and failure retries via RabbitMQ workers. Designed to tolerate inconsistent external callbacks and network errors.</p>
+            <p><strong>Why it exists:</strong> Enable online ordering and last-mile delivery for a federal drug store chain through Yandex Delivery, handling ~1,000 orders per day across the integration.</p>
+            <p><strong>How it works:</strong> Designed and built a backend service from scratch integrating the internal order management system with the Yandex Delivery API. The core challenge was reliability: external delivery APIs produce inconsistent callback behavior — duplicate status events, missing confirmations, and undocumented edge cases on the vendor side. Built RabbitMQ-based retry workers with idempotent processing to handle all failure classes without corrupting order state. The hardest real-world problem wasn't technical - overnight business requirement changes forced full redesign of the order flow mid-project, requiring the integration logic to be restructured without downtime to the live ordering system.</p>
             <p><strong>Tech used:</strong> Python, Django, PostgreSQL, RabbitMQ, REST APIs.</p>
           </article>
           <article class="project-card">
             <h3>Retail Data Warehouse (OLTP → DWH) (2024-2025)</h3>
-            <p><strong>Why it exists:</strong> Provide management and regional offices with consolidated sales, stock, and pharmacy performance reports.</p>
-            <p><strong>How it works:</strong> PostgreSQL-based DWH with multiple large fact tables (400M+ rows). Partitioning applied to manage growth. Complex SQL (CTEs, aggregates, window functions) used for reporting and monthly financial reconciliation.</p>
+            <p><strong>Why it exists:</strong> Give management, regional offices, and connected 1C systems a single source of truth for sales, stock, pharmacy performance, and financial reporting - replacing fragmented per-store queries against live OLTP tables.</p>
+            <p><strong>How it works:</strong> Designed and maintained a PostgreSQL DWH covering 50+ fact and dimension tables spanning the full pharmacy retail domain: employee data, store metadata, inventory, orders, and pre-aggregated analytical tables. At 400M+ rows across core fact tables, partitioning was applied to keep query performance stable as data grew. Wrote complex reporting SQL - CTEs, window functions, multi-level aggregates - consumed by BI dashboards and internal 1C system integrations. The most persistent challenge was data integrity: OLTP systems in retail accumulate inconsistencies over time, and reconciliation work (ensuring DWH totals matched source system records) was a recurring, non-trivial part of maintaining the warehouse.</p>
             <p><strong>Tech used:</strong> PostgreSQL, SQL, Python.</p>
           </article>
           <article class="project-card">
             <h3>ERP & Legacy System Integration (2023-2024)</h3>
-            <p><strong>Why it exists:</strong> Synchronize product catalog, pricing, and stock data between legacy Java-based systems and new Python services.</p>
-            <p><strong>How it works:</strong> Gradual migration from Java modules to Python services; API-based communication and async processing via RabbitMQ to avoid blocking critical retail operations.</p>
+            <p><strong>Why it exists:</strong> Replace a brittle internal Java-based legacy system (built by a previous developer, largely undocumented) with clean Python services, without disrupting live pharmacy retail operations during the transition.</p>
+            <p><strong>How it works:</strong> Executed a hard cutover migration of ~20 tables covering the full pharmacy retail domain - product catalog, pricing, stock, and operational data. The migration took 3 months, with the majority of that time spent on data quality: the legacy PostgreSQL database contained years of accumulated junk data - malformed records, broken references, missing values with no source to reload from. Where data could be reconstructed, it was reloaded from available sources. Where it couldn't, records had to be inferred, validated against business rules, and filled in manually - a process requiring close collaboration with business stakeholders to confirm correctness. Built API-based communication between legacy and new services with RabbitMQ async processing to prevent blocking during the transition period.</p>
             <p><strong>Tech used:</strong> Python, Java (legacy), PostgreSQL, RabbitMQ.</p>
           </article>
           <article class="project-card">
             <h3>Web Data Parsing & Competitor Monitoring (2023-2026)</h3>
-            <p><strong>Why it exists:</strong> Collect competitor pricing and product availability data for analytics and pricing adjustments.</p>
-            <p><strong>How it works:</strong> Automated parsing tools with scheduled runs; data cleaned and loaded into internal reporting systems. Focused on resilience against layout changes and incomplete data.</p>
+            <p><strong>Why it exists:</strong> Track competitor pricing and product availability across 6 pharmacy retail websites to inform pricing decisions and market positioning.</p>
+            <p><strong>How it works:</strong> Built and maintained automated scrapers for 6 full competitor websites running on weekly schedules. The core reliability challenge with long-running scrapers is layout drift - competitor sites update their HTML structure without notice, silently breaking naive scrapers. Built change detection logic that identifies when a page structure deviates from the expected pattern and flags it for review rather than silently producing corrupted data. Cleaned and normalized output loads into OLAP cubes for analytical consumption, enabling pricing and availability comparisons across competitors at the product level.</p>
             <p><strong>Tech used:</strong> Python, BeautifulSoup, PostgreSQL.</p>
-          </article>
-          <article class="project-card">
-            <h3>Infrastructure & Server Configuration (2023-2026)</h3>
-            <p><strong>Why it exists:</strong> Maintain stable deployment and operation of backend services across staging and production environments.</p>
-            <p><strong>How it works:</strong> Dockerized services; server configuration and monitoring setup; ensured reliable deployments and minimized downtime during updates.</p>
-            <p><strong>Tech used:</strong> Docker, Linux, Nginx, PostgreSQL.</p>
           </article>
         </div>
         <div class="carousel-controls" aria-label="Project slider controls">
