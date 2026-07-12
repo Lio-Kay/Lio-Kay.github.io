@@ -50,7 +50,7 @@
             <p><strong>Why it exists:</strong> Demonstrate end-to-end data engineering depth: automated multi-source ingestion, medallion warehouse architecture, dbt-based transformation, and a live BI layer — built production-style from scratch.</p>
             <p><strong>How it works:</strong> Three public APIs (CoinGecko, US Treasury, GitHub Events) feed raw data into a PostgreSQL Bronze layer via Apache Airflow. dbt models (orchestrated via Astronomer Cosmos) transform data through Silver and Gold layers using window functions, incremental strategies, and star-schema dimensional modeling. Downstream: a FastAPI read layer serves Gold table data as JSON endpoints; Metabase dashboards connect directly to the Gold schema for live BI reporting. Asset-based cascade triggering ensures Silver and Gold transforms only fire after successful upstream ingestion — no blind temporal scheduling.</p>
             <p><strong>Tech used:</strong> Python, Apache Airflow 3, dbt Core, Astronomer Cosmos, PostgreSQL 16, FastAPI, SQLAlchemy Core, Metabase, Docker.</p>
-            <p><a href="https://github.com/Lio-Kay/multi-broker-dwh" target="_blank" rel="noopener noreferrer"><span>View on GitHub →</span></a></p>
+            <a href="https://github.com/Lio-Kay/multi-broker-dwh" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
           </article>
           <article class="project-card">
             <h3>E-commerce & Yandex Delivery Integration (2024-2026)</h3>
