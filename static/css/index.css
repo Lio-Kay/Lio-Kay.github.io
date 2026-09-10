@@ -159,7 +159,8 @@ h3 {
 }
 
 .badge-private {
-  display: inline-block;
+  display: block;
+  width: fit-content;
   font-size: 0.68rem;
   font-weight: 600;
   padding: 0.15rem 0.55rem;
@@ -167,8 +168,7 @@ h3 {
   background: var(--surface-soft);
   border: 1px solid var(--border);
   color: var(--muted);
-  vertical-align: middle;
-  margin-left: 0.5rem;
+  margin-top: 0.35rem;
 }
 
 .nda-note {
