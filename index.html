@@ -8,6 +8,19 @@
   <title>Ilya Kopkov | Backend Engineer</title>
   <link rel="stylesheet" href="static/css/index.css">
   <link rel="icon" type="image/gif" href="static/Favicon.gif">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ilya Kopkov | Data Engineer">
+  <meta property="og:description" content="Data engineer building reliable data warehouses and pipelines — dbt, Airflow, PostgreSQL, AWS.">
+  <meta property="og:image" content="https://lio-kay.github.io/static/og-preview.png">
+  <meta property="og:url" content="https://lio-kay.github.io/">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ilya Kopkov | Data Engineer">
+  <meta name="twitter:description" content="Data engineer building reliable data warehouses and pipelines — dbt, Airflow, PostgreSQL, AWS.">
+  <meta name="twitter:image" content="https://lio-kay.github.io/static/og-preview.png">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -26,13 +39,20 @@
   <main id="main-content" class="container">
     <section id="hero" aria-labelledby="hero-title" class="hero-grid">
       <div>
-        <h1 id="hero-title">👋 Hey, I’m Ilya</h1>
-        <h2>Backend engineer building scalable, data-intensive systems</h2>
+        <h1 id="hero-title">Hey, I'm Ilya</h1>
+        <h2>Data Engineer | AWS, PostgreSQL, dbt, Airflow | Python | Retail & Logistics | EU/Remote</h2>
         <br>
         <p class="hero-subtitle">
           I like turning messy requirements into clean APIs, stable data models,
-          and services that stay fast under pressure
+          and services that stay fast under pressure.
         </p>
+        <p class="hero-availability">
+          Based in Spain · Open to EU-based and remote contract roles
+        </p>
+        <!-- Replace YOUR_FILE_ID with your actual Google Drive file id, and make sure sharing is set to "Anyone with the link can view" -->
+        <a class="cv-button" href="https://drive.google.com/file/d/YOUR_FILE_ID/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+          Download CV
+        </a>
       </div>
       <figure class="hero-photo-template">
         <img src="static/Profile photo small.gif" alt="Profile photo">
@@ -41,7 +61,7 @@
 
     <section id="projects" aria-labelledby="projects-title">
       <div class="projects-header">
-        <h2 id="projects-title">🚀 Selected Work</h2>
+        <h2 id="projects-title">Selected Work</h2>
       </div>
       <div class="projects-carousel-wrap">
         <div class="projects-carousel" role="region" aria-label="Project slider" tabindex="0">
@@ -53,28 +73,32 @@
             <a href="https://github.com/Lio-Kay/multi-broker-dwh" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
           </article>
           <article class="project-card">
-            <h3>E-commerce & Yandex Delivery Integration (2024-2026)</h3>
+            <h3>E-commerce & Yandex Delivery Integration (2024-2026) <span class="badge-private">Private · NDA</span></h3>
             <p><strong>Why it exists:</strong> Enable online ordering and last-mile delivery for a federal drug store chain through Yandex Delivery, handling ~1,000 orders per day across the integration.</p>
             <p><strong>How it works:</strong> Designed and built a backend service from scratch integrating the internal order management system with the Yandex Delivery API. The core challenge was reliability: external delivery APIs produce inconsistent callback behavior — duplicate status events, missing confirmations, and undocumented edge cases on the vendor side. Built RabbitMQ-based retry workers with idempotent processing to handle all failure classes without corrupting order state. The hardest real-world problem wasn't technical - overnight business requirement changes forced full redesign of the order flow mid-project, requiring the integration logic to be restructured without downtime to the live ordering system.</p>
             <p><strong>Tech used:</strong> Python, Django, PostgreSQL, RabbitMQ, REST APIs.</p>
+            <p class="nda-note">Codebase is private under NDA — architecture, scale, and outcomes described above are accurate.</p>
           </article>
           <article class="project-card">
-            <h3>Retail Data Warehouse (OLTP → DWH) (2024-2025)</h3>
+            <h3>Retail Data Warehouse (OLTP → DWH) (2024-2025) <span class="badge-private">Private · NDA</span></h3>
             <p><strong>Why it exists:</strong> Give management, regional offices, and connected 1C systems a single source of truth for sales, stock, pharmacy performance, and financial reporting - replacing fragmented per-store queries against live OLTP tables.</p>
             <p><strong>How it works:</strong> Designed and maintained a PostgreSQL DWH covering 50+ fact and dimension tables spanning the full pharmacy retail domain: employee data, store metadata, inventory, orders, and pre-aggregated analytical tables. At 400M+ rows across core fact tables, partitioning was applied to keep query performance stable as data grew. Wrote complex reporting SQL - CTEs, window functions, multi-level aggregates - consumed by BI dashboards and internal 1C system integrations. The most persistent challenge was data integrity: OLTP systems in retail accumulate inconsistencies over time, and reconciliation work (ensuring DWH totals matched source system records) was a recurring, non-trivial part of maintaining the warehouse.</p>
             <p><strong>Tech used:</strong> PostgreSQL, SQL, Python.</p>
+            <p class="nda-note">Codebase is private under NDA — architecture, scale, and outcomes described above are accurate.</p>
           </article>
           <article class="project-card">
-            <h3>ERP & Legacy System Integration (2023-2024)</h3>
+            <h3>ERP & Legacy System Integration (2023-2024) <span class="badge-private">Private · NDA</span></h3>
             <p><strong>Why it exists:</strong> Replace a brittle internal Java-based legacy system (built by a previous developer, largely undocumented) with clean Python services, without disrupting live pharmacy retail operations during the transition.</p>
             <p><strong>How it works:</strong> Executed a hard cutover migration of ~20 tables covering the full pharmacy retail domain - product catalog, pricing, stock, and operational data. The migration took 3 months, with the majority of that time spent on data quality: the legacy PostgreSQL database contained years of accumulated junk data - malformed records, broken references, missing values with no source to reload from. Where data could be reconstructed, it was reloaded from available sources. Where it couldn't, records had to be inferred, validated against business rules, and filled in manually - a process requiring close collaboration with business stakeholders to confirm correctness. Built API-based communication between legacy and new services with RabbitMQ async processing to prevent blocking during the transition period.</p>
             <p><strong>Tech used:</strong> Python, Java (legacy), PostgreSQL, RabbitMQ.</p>
+            <p class="nda-note">Codebase is private under NDA — architecture, scale, and outcomes described above are accurate.</p>
           </article>
           <article class="project-card">
-            <h3>Web Data Parsing & Competitor Monitoring (2023-2026)</h3>
+            <h3>Web Data Parsing & Competitor Monitoring (2023-2026) <span class="badge-private">Private · NDA</span></h3>
             <p><strong>Why it exists:</strong> Track competitor pricing and product availability across 6 pharmacy retail websites to inform pricing decisions and market positioning.</p>
             <p><strong>How it works:</strong> Built and maintained automated scrapers for 6 full competitor websites running on weekly schedules. The core reliability challenge with long-running scrapers is layout drift - competitor sites update their HTML structure without notice, silently breaking naive scrapers. Built change detection logic that identifies when a page structure deviates from the expected pattern and flags it for review rather than silently producing corrupted data. Cleaned and normalized output loads into OLAP cubes for analytical consumption, enabling pricing and availability comparisons across competitors at the product level.</p>
             <p><strong>Tech used:</strong> Python, BeautifulSoup, PostgreSQL.</p>
+            <p class="nda-note">Codebase is private under NDA — architecture, scale, and outcomes described above are accurate.</p>
           </article>
         </div>
         <div class="carousel-controls" aria-label="Project slider controls">
@@ -85,17 +109,18 @@
     </section>
 
     <section id="focus" aria-labelledby="focus-title">
-      <h2 id="focus-title">🛠️ What I Focus On</h2>
+      <h2 id="focus-title">What I Focus On</h2>
       <ul>
-        <li>Scalable REST API design and service decomposition</li>
-        <li>PostgreSQL performance tuning, schema design, and data modeling</li>
-        <li>Async and event-driven backend workflows</li>
-        <li>OLTP to DWH pipeline design for analytics and reporting</li>
+        <li>PostgreSQL data warehouse design and performance at scale (400M+ row fact tables, partitioning, schema design)</li>
+        <li>Modern data engineering: dbt Core, Apache Airflow, medallion architecture (Bronze/Silver/Gold)</li>
+        <li>OLTP → DWH pipeline design for analytics and reporting</li>
+        <li>Async, event-driven backend integrations (RabbitMQ, retry/idempotency patterns)</li>
+        <li>AWS deployment for data pipelines and backend services</li>
       </ul>
     </section>
 
     <section id="contact" aria-labelledby="contact-title">
-      <h2 id="contact-title">🤝 Contact</h2>
+      <h2 id="contact-title">Contact</h2>
       <address>
         <ul class="contact-list">
           <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/ilya-kopkov/" target="_blank" rel="noopener noreferrer">linkedin.com/in/ilya-kopkov</a></li>
@@ -103,6 +128,7 @@
           <li><span>Telegram</span><a href="https://t.me/Up_n_forward" target="_blank" rel="noopener noreferrer">@Up_n_forward</a></li>
           <li><span>WhatsApp</span><a href="https://api.whatsapp.com/send/?phone=79833078879" target="_blank" rel="noopener noreferrer">Ilya K.</a></li>
           <li><span>GitHub</span><a href="https://github.com/Lio-Kay" target="_blank" rel="noopener noreferrer">github.com/Lio-Kay</a></li>
+          <li><span>CV</span><a href="https://drive.google.com/file/d/YOUR_FILE_ID/view?usp=sharing" target="_blank" rel="noopener noreferrer">View on Google Drive</a></li>
         </ul>
       </address>
     </section>
