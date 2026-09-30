@@ -4,22 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Ilia Kopkov">
-  <meta name="description" content="Ilia Kopkov - backend engineer building reliable and scalable data systems.">
-  <title>Ilia Kopkov | Backend Engineer</title>
+  <meta name="description" content="Ilia Kopkov - Backend Engineer specializing in Data Infrastructure, Python APIs, and Data Pipelines.">
+  <title>Ilia Kopkov | Backend Engineer (Data Infrastructure)</title>
   <link rel="stylesheet" href="static/css/index.css">
   <link rel="icon" type="image/gif" href="static/Favicon.gif">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Ilia Kopkov | Data Engineer">
-  <meta property="og:description" content="Data engineer building reliable data warehouses and pipelines — dbt, Airflow, PostgreSQL, AWS.">
+  <meta property="og:title" content="Ilia Kopkov | Backend & Data Infrastructure Engineer">
+  <meta property="og:description" content="Backend & Data Infrastructure Engineer: Python microservices, ELT pipelines, and AWS infrastructure - FastAPI, PostgreSQL, Terraform, dbt, Airflow, Docker.">
   <meta property="og:image" content="https://lio-kay.github.io/static/og-preview.png">
   <meta property="og:url" content="https://lio-kay.github.io/">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Ilia Kopkov | Data Engineer">
-  <meta name="twitter:description" content="Data engineer building reliable data warehouses and pipelines — dbt, Airflow, PostgreSQL, AWS.">
+  <meta name="twitter:title" content="Ilia Kopkov | Backend & Data Infrastructure Engineer">
+  <meta name="twitter:description" content="Backend Engineer building high-performance Python microservices, data infrastructure, and reliable pipelines — FastAPI, PostgreSQL, dbt, Airflow, Docker.">
   <meta name="twitter:image" content="https://lio-kay.github.io/static/og-preview.png">
 </head>
 <body>
@@ -39,19 +39,17 @@
   <main id="main-content" class="container">
     <section id="hero" aria-labelledby="hero-title" class="hero-grid">
       <div>
-        <h1 id="hero-title">Hey, I'm Ilia</h1>
-        <h2>Data Engineer |  AWS, SQL, dbt, Airflow, Python, FastAPI, Terraform </h2>
+        <h1 id="hero-title">Hey, I'm Ilia 👋</h1>
+        <h2>Backend Engineer (Data Infrastructure & Python)</h2>
         <br>
         <p class="hero-subtitle">
-          I like turning messy requirements into clean APIs, stable data models,
-          and services that stay fast under pressure.
+          I build high-performance Python microservices (FastAPI), robust data pipelines (dbt, Airflow), and reliable PostgreSQL data infrastructure engineered for high-availability production environments.
         </p>
         <p class="hero-availability">
-          Based in Spain · Open to EU-based and remote B2B contract roles
+          📍 Based in Spain (EU) · Open to B2B Contract
         </p>
-        <!-- Replace YOUR_FILE_ID with your actual Google Drive file id, and make sure sharing is set to "Anyone with the link can view" -->
         <a class="cv-button" href="https://drive.google.com/file/d/1zULx1DXzTvTKFIctZ1Eq8Z9QIioHnjie/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-          Download CV
+          View Resume (CV)
         </a>
       </div>
       <figure class="hero-photo-template">
@@ -61,45 +59,38 @@
 
     <section id="projects" aria-labelledby="projects-title">
       <div class="projects-header">
-        <h2 id="projects-title">Selected Work</h2>
+        <h2 id="projects-title">Selected Engineering Projects</h2>
       </div>
       <div class="projects-carousel-wrap">
         <div class="projects-carousel" role="region" aria-label="Project slider" tabindex="0">
+          
+          <!-- Project 1: Pet Open Source -->
           <article class="project-card">
             <h3>Multi-Broker Data Platform (2026)</h3>
-            <p><strong>Why it exists:</strong> Demonstrate end-to-end data engineering depth: automated multi-source ingestion, medallion warehouse architecture, dbt-based transformation, and a live BI layer - built production-style from scratch.</p>
-            <p><strong>How it works:</strong> Three public APIs (CoinGecko, US Treasury, GitHub Events) feed raw data into a PostgreSQL Bronze layer via Apache Airflow. dbt models (orchestrated via Astronomer Cosmos) transform data through Silver and Gold layers using window functions, incremental strategies, and star-schema dimensional modeling. Downstream: a FastAPI read layer serves Gold table data as JSON endpoints; Metabase dashboards connect directly to the Gold schema for live BI reporting. Asset-based cascade triggering ensures Silver and Gold transforms only fire after successful upstream ingestion - no blind temporal scheduling.</p>
-            <p><strong>Tech used:</strong> Python, PostgreSQL, dbt, Apache Airflow 3, FastAPI, SQLAlchemy Core, Metabase, Docker.</p>
-            <a href="https://github.com/Lio-Kay/multi-broker-dwh" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+            <p><strong>Why it exists:</strong> Production-style backend & data infrastructure platform delivering automated ingestion, dbt modeling, and low-latency API metrics endpoints from scratch.</p>
+            <p><strong>How it works:</strong> Ingests multi-source financial and telemetry APIs via containerized Apache Airflow 3 with asset-based cascade triggers. dbt Core models (via Astronomer Cosmos) transform raw datasets in PostgreSQL using incremental materialization and automated quality tests. Exposes analytics via a high-performance FastAPI & SQLAlchemy Core read layer without ORM overhead.</p>
+            <p><strong>Tech used:</strong> Python, FastAPI, PostgreSQL, dbt Core, Apache Airflow 3, SQLAlchemy Core, Docker, REST APIs.</p>
+            <a href="https://github.com/Lio-Kay/multi-broker-dwh" target="_blank" rel="noopener noreferrer">View Code on GitHub →</a>
           </article>
+
+          <!-- Project 2: E-commerce Integration -->
           <article class="project-card">
-            <h3>E-commerce & Yandex Delivery Integration (2024-2026)</h3>
-            <p><strong>Why it exists:</strong> Enable online ordering and last-mile delivery for a federal drug store chain through Yandex Delivery, handling ~1,000 orders per day across the integration.</p>
-            <p><strong>How it works:</strong> Designed and built a backend service from scratch integrating the internal order management system with the Yandex Delivery API. The core challenge was reliability: external delivery APIs produce inconsistent callback behavior - duplicate status events, missing confirmations, and undocumented edge cases on the vendor side. Built RabbitMQ-based retry workers with idempotent processing to handle all failure classes without corrupting order state. The hardest real-world problem wasn't technical - overnight business requirement changes forced full redesign of the order flow mid-project, requiring the integration logic to be restructured without downtime to the live ordering system.</p>
-            <p><strong>Tech used:</strong> Python, Django, PostgreSQL, RabbitMQ, Docker.</p>
-            <p class="nda-note">Codebase is private under NDA - architecture, scale, and outcomes described above are accurate.</p>
+            <h3>E-Commerce & Asynchronous Logistics Engine (2024–2026)</h3>
+            <p><strong>Why it exists:</strong> Connect internal retail systems with external delivery APIs (Yandex Eats/Delivery) for a nationwide pharmacy chain, creating a digital sales channel driving ~10% of total revenue.</p>
+            <p><strong>How it works:</strong> Architected asynchronous processing pipelines using RabbitMQ and Python workers to synchronize orders and inventory status in real-time. Designed PostgreSQL integration views, custom validation schemas, and resilient retry handlers with dead-letter queues (DLQ) to ensure 99.9% fault tolerance against external API network timeouts and duplicate webhooks.</p>
+            <p><strong>Tech used:</strong> Python, PostgreSQL, RabbitMQ, REST APIs, Django REST Framework, Celery, Docker.</p>
+            <p class="nda-note">Codebase is private under NDA - architecture and business outcomes are accurate.</p>
           </article>
+
+          <!-- Project 3: DWH & Core Data Platform -->
           <article class="project-card">
-            <h3>Retail Data Warehouse (OLTP → DWH) (2024-2025)</h3>
-            <p><strong>Why it exists:</strong> Give management, regional offices, and connected 1C systems a single source of truth for sales, stock, pharmacy performance, and financial reporting - replacing fragmented per-store queries against live OLTP tables.</p>
-            <p><strong>How it works:</strong> Designed and maintained a PostgreSQL DWH covering 50+ fact and dimension tables spanning the full pharmacy retail domain: employee data, store metadata, inventory, orders, and pre-aggregated analytical tables. At 400M+ rows across core fact tables, partitioning was applied to keep query performance stable as data grew. Wrote complex reporting SQL - CTEs, window functions, multi-level aggregates - consumed by BI dashboards and internal 1C system integrations. The most persistent challenge was data integrity: OLTP systems in retail accumulate inconsistencies over time, and reconciliation work (ensuring DWH totals matched source system records) was a recurring, non-trivial part of maintaining the warehouse.</p>
-            <p><strong>Tech used:</strong> Python, PostgreSQL, dbt, SQLAlchemy Core, RabbitMQ, Docker</p>
-            <p class="nda-note">Codebase is private under NDA - architecture, scale, and outcomes described above are accurate.</p>
+            <h3>Retail Data Infrastructure & Analytics Platform (2024–2026)</h3>
+            <p><strong>Why it exists:</strong> Provide a single high-throughput source of truth for financial reconciliation, stock control, and operational metrics across 2,000+ retail stores.</p>
+            <p><strong>How it works:</strong> Designed and maintained a PostgreSQL Data Warehouse (400M+ rows in core fact tables) using table partitioning, indexed schemas, and optimized SQL logic. Automated daily ELT pipelines with dbt Core, implementing strict data quality contracts and testing to ensure DWH totals strictly match live transactional data.</p>
+            <p><strong>Tech used:</strong> Python, PostgreSQL, dbt Core, SQL, Docker, Data Modeling.</p>
+            <p class="nda-note">Codebase is private under NDA - architecture and business outcomes are accurate.</p>
           </article>
-          <article class="project-card">
-            <h3>ERP & Legacy System Integration (2023-2024)</h3>
-            <p><strong>Why it exists:</strong> Replace a brittle internal Java-based legacy system (built by a previous developer, largely undocumented) with clean Python services, without disrupting live pharmacy retail operations during the transition.</p>
-            <p><strong>How it works:</strong> Executed a hard cutover migration of ~20 tables covering the full pharmacy retail domain - product catalog, pricing, stock, and operational data. The migration took 3 months, with the majority of that time spent on data quality: the legacy PostgreSQL database contained years of accumulated junk data - malformed records, broken references, missing values with no source to reload from. Where data could be reconstructed, it was reloaded from available sources. Where it couldn't, records had to be inferred, validated against business rules, and filled in manually - a process requiring close collaboration with business stakeholders to confirm correctness. Built API-based communication between legacy and new services with RabbitMQ async processing to prevent blocking during the transition period.</p>
-            <p><strong>Tech used:</strong> Python, dbt, PostgreSQL, RabbitMQ, Docker, Java (legacy)</p>
-            <p class="nda-note">Codebase is private under NDA - architecture, scale, and outcomes described above are accurate.</p>
-          </article>
-          <article class="project-card">
-            <h3>Web Data Parsing & Competitor Monitoring (2023-2026)</h3>
-            <p><strong>Why it exists:</strong> Track competitor pricing and product availability across 6 pharmacy retail websites to inform pricing decisions and market positioning.</p>
-            <p><strong>How it works:</strong> Built and maintained automated scrapers for 6 full competitor websites running on weekly schedules. The core reliability challenge with long-running scrapers is layout drift - competitor sites update their HTML structure without notice, silently breaking naive scrapers. Built change detection logic that identifies when a page structure deviates from the expected pattern and flags it for review rather than silently producing corrupted data. Cleaned and normalized output loads into OLAP cubes for analytical consumption, enabling pricing and availability comparisons across competitors at the product level.</p>
-            <p><strong>Tech used:</strong> Python, Django, PostgreSQL, BeautifulSoup, Docker.</p>
-            <p class="nda-note">Codebase is private under NDA - architecture, scale, and outcomes described above are accurate.</p>
-          </article>
+
         </div>
         <div class="carousel-controls" aria-label="Project slider controls">
           <button type="button" class="carousel-btn" data-direction="prev" aria-label="Previous project">‹</button>
@@ -111,10 +102,10 @@
     <section id="focus" aria-labelledby="focus-title">
       <h2 id="focus-title">What I Focus On</h2>
       <ul>
-        <li>High-Scale Data Warehousing: PostgreSQL DWH architecture, schema optimization, and custom partitioning for 400M+ row fact tables</li>
-        <li>Modern ELT Platforms: Orchestrating resilient dbt Core and Apache Airflow pipelines using medallion architecture (Bronze/Silver/Gold)</li>
-        <li>Data Delivery & APIs: Exposing analytical models and DWH metrics via high-performance FastAPI microservices and REST APIs</li>
-        <li>Infrastructure & Automation: Provisioning cloud-native data pipelines on AWS using Terraform, Docker, and CI/CD practices</li>
+        <li><strong>Data Infrastructure & Microservices:</strong> Building low-latency REST APIs (FastAPI) and async webhooks to deliver data and metrics out of PostgreSQL/DWH.</li>
+        <li><strong>Data Pipelines & Orchestration:</strong> Designing automated ELT workflows and data transformations using Python, dbt Core, and Apache Airflow.</li>
+        <li><strong>Production Engineering & DevOps:</strong> Containerizing microservices with Docker, writing clean/tested Python code, and configuring automated CI/CD pipelines.</li>
+        <li><strong>Database Performance & Modeling:</strong> Designing schema architectures, table partitioning strategies, and optimizing complex SQL for relational stores and warehouses.</li>
       </ul>
     </section>
 
@@ -127,7 +118,7 @@
           <li><span>Telegram</span><a href="https://t.me/Up_n_fwd" target="_blank" rel="noopener noreferrer">@Up_n_fwd</a></li>
           <li><span>WhatsApp</span><a href="https://api.whatsapp.com/send/?phone=34664307505" target="_blank" rel="noopener noreferrer">Ilia K.</a></li>
           <li><span>GitHub</span><a href="https://github.com/Lio-Kay" target="_blank" rel="noopener noreferrer">github.com/Lio-Kay</a></li>
-          <li><span>CV</span><a href="https://drive.google.com/file/d/1zULx1DXzTvTKFIctZ1Eq8Z9QIioHnjie/view?usp=sharing" target="_blank" rel="noopener noreferrer">View on Google Drive</a></li>
+          <li><span>Resume</span><a href="https://drive.google.com/file/d/1zULx1DXzTvTKFIctZ1Eq8Z9QIioHnjie/view?usp=sharing" target="_blank" rel="noopener noreferrer">View on Google Drive</a></li>
         </ul>
       </address>
     </section>
