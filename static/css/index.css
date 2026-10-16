@@ -99,7 +99,7 @@ main.container {
   padding: 0;
   list-style: none;
   display: flex;
-  gap: 1.6rem;
+  gap: 1.5rem;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -115,6 +115,31 @@ main.container {
 .nav-list a:hover,
 .nav-list a:focus-visible {
   color: var(--accent);
+}
+
+/* LANGUAGE SWITCHER */
+.lang-switcher {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 600;
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.18rem 0.5rem;
+}
+
+.lang-switcher a {
+  color: var(--muted);
+}
+
+.lang-switcher a.active-lang {
+  color: var(--accent);
+  font-weight: 800;
+}
+
+.lang-sep {
+  color: var(--border-strong);
+  margin: 0 0.1rem;
 }
 
 /* SECTIONS & TYPOGRAPHY */
@@ -435,7 +460,7 @@ code {
 }
 
 .project-summary {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.6rem;
   font-size: 0.9rem;
   color: var(--text);
 }
@@ -532,6 +557,36 @@ code {
   font-weight: 600;
   color: var(--accent);
   word-break: break-all;
+}
+
+/* PRINT STYLES (@media print) */
+@media print {
+  body {
+    background: #ffffff;
+    color: #000000;
+    font-size: 11pt;
+  }
+  .site-header,
+  .hero-actions,
+  .btn-outline,
+  .skip-link {
+    display: none !important;
+  }
+  section {
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+    page-break-inside: avoid;
+  }
+  .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+  a {
+    color: #000000;
+    text-decoration: none;
+  }
 }
 
 /* RESPONSIVE BREAKPOINTS */
