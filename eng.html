@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Ilia Kopkov">
+  <meta name="description" content="Ilia Kopkov — Backend & Data Infrastructure Engineer specializing in high-throughput Python APIs, PostgreSQL optimization, message brokers, and ELT pipelines.">
+  <title>Ilia Kopkov | Backend & Data Infrastructure Engineer</title>
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="icon" type="image/gif" href="static/Favicon.gif">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ilia Kopkov | Backend & Data Infrastructure Engineer">
+  <meta property="og:description" content="High-throughput Python microservices (FastAPI, Django), event-driven systems (Kafka, RabbitMQ), PostgreSQL optimization (400M+ rows), and AWS/dbt/Airflow data infrastructure.">
+  <meta property="og:image" content="https://lio-kay.github.io/static/og-preview.png">
+  <meta property="og:url" content="https://lio-kay.github.io/">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ilia Kopkov | Backend & Data Infrastructure Engineer">
+  <meta name="twitter:description" content="Backend & Data Infrastructure Engineer: Python (FastAPI, Django, asyncio), PostgreSQL, Kafka, RabbitMQ, dbt, Airflow, AWS, Docker.">
+  <meta name="twitter:image" content="https://lio-kay.github.io/static/og-preview.png">
+
+  <!-- JSON-LD Structured Data (Schema.org / Person) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ilia Kopkov",
+    "jobTitle": "Backend & Data Infrastructure Engineer",
+    "url": "https://lio-kay.github.io/",
+    "sameAs": [
+      "https://www.linkedin.com/in/ilia-kopkov/",
+      "https://github.com/Lio-Kay"
+    ],
+    "knowsAbout": [
+      "Python",
+      "FastAPI",
+      "Django",
+      "PostgreSQL",
+      "Apache Kafka",
+      "RabbitMQ",
+      "dbt",
+      "Apache Airflow",
+      "AWS",
+      "Docker",
+      "Terraform"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Asturias",
+      "addressCountry": "Spain"
+    }
+  }
+  </script>
+
+  <!-- Language Auto-Detection Script -->
+  <script>
+    (function() {
+      const storedLang = localStorage.getItem('site_lang');
+      if (!storedLang && navigator.language && navigator.language.toLowerCase().startsWith('ru')) {
+        localStorage.setItem('site_lang', 'ru');
+        window.location.replace('ru.html');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <nav aria-label="Primary navigation" class="container nav-wrap">
+      <a href="#hero" class="nav-brand">Ilia Kopkov</a>
+      <ul class="nav-list">
+        <li><a href="#stack">Tech Stack</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#focus">Architecture Focus</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="lang-switcher">
+          <a href="eng.html" class="active-lang" onclick="localStorage.setItem('site_lang','en')">EN</a>
+          <span class="lang-sep">/</span>
+          <a href="ru.html" onclick="localStorage.setItem('site_lang','ru')">RU</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content" class="container">
+
+    <!-- HERO SECTION -->
+    <section id="hero" aria-labelledby="hero-title" class="hero-section">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <p class="hero-eyebrow">Asturias, Spain (EU) &middot; Open to B2B / Autónomo Remote Contracts</p>
+          <h1 id="hero-title">Ilia Kopkov</h1>
+          <h2 class="hero-role">Backend &amp; Data Infrastructure Engineer</h2>
+          <p class="hero-subtitle">
+            4+ years engineering high-throughput Python backend services (FastAPI, Django, asyncio), event-driven integrations (Kafka, RabbitMQ), and fault-tolerant data platforms (PostgreSQL, dbt Core, Apache Airflow, AWS) across fintech, retail, and logistics domains.
+          </p>
+          <div class="hero-actions">
+            <a class="btn-primary" href="https://drive.google.com/file/d/1zULx1DXzTvTKFIctZ1Eq8Z9QIioHnjie/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+              View Resume
+            </a>
+            <a class="btn-secondary" href="https://github.com/Lio-Kay" target="_blank" rel="noopener noreferrer">
+              GitHub Profile
+            </a>
+          </div>
+        </div>
+        <figure class="hero-photo-template">
+          <img src="static/PFP_Square.png" alt="Ilia Kopkov">
+        </figure>
+      </div>
+
+      <!-- KEY IMPACT METRICS BAR -->
+      <div class="metrics-bar" aria-label="Key engineering metrics">
+        <div class="metric-item">
+          <span class="metric-value">600k+</span>
+          <span class="metric-label">Daily API &amp; Event Transactions</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-value">400M+</span>
+          <span class="metric-label">Rows in PostgreSQL Fact Tables</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-value">&lt;200ms</span>
+          <span class="metric-label">Tuned API Response Latency</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-value">~10%</span>
+          <span class="metric-label">Retail Revenue via Async Bus</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECH STACK SECTION -->
+    <section id="stack" aria-labelledby="stack-title">
+      <h2 id="stack-title">Core Technical Stack</h2>
+      <div class="stack-grid">
+        <div class="stack-group">
+          <h3>Backend &amp; APIs</h3>
+          <ul class="tag-list">
+            <li>Python 3.11+</li>
+            <li>FastAPI</li>
+            <li>Django / DRF</li>
+            <li>asyncio / aiohttp</li>
+            <li>Pydantic v2</li>
+            <li>SQLAlchemy Core &amp; ORM</li>
+            <li>Alembic</li>
+            <li>REST / OpenAPI</li>
+          </ul>
+        </div>
+        <div class="stack-group">
+          <h3>Databases &amp; Caching</h3>
+          <ul class="tag-list">
+            <li>PostgreSQL (Partitioning, Tuning)</li>
+            <li>EXPLAIN ANALYZE</li>
+            <li>Window Functions &amp; CTEs</li>
+            <li>Redis (Cache / Locks)</li>
+            <li>Amazon S3 / Parquet</li>
+            <li>asyncpg / psycopg2</li>
+          </ul>
+        </div>
+        <div class="stack-group">
+          <h3>Messaging &amp; Data Infrastructure</h3>
+          <ul class="tag-list">
+            <li>Apache Kafka</li>
+            <li>RabbitMQ</li>
+            <li>Celery</li>
+            <li>dbt Core (SCD2, Medallion)</li>
+            <li>Apache Airflow 3</li>
+            <li>AWS Glue</li>
+            <li>Pandas / PyArrow</li>
+          </ul>
+        </div>
+        <div class="stack-group">
+          <h3>DevOps, Testing &amp; Observability</h3>
+          <ul class="tag-list">
+            <li>Docker &amp; Compose</li>
+            <li>AWS (Lambda, S3, IAM)</li>
+            <li>Terraform (IaC)</li>
+            <li>CI/CD (GitHub Actions / GitLab)</li>
+            <li>pytest (Unit &amp; Integration)</li>
+            <li>dbt test</li>
+            <li>Prometheus &amp; Grafana</li>
+            <li>Linux</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" aria-labelledby="projects-title">
+      <div class="section-header">
+        <h2 id="projects-title">Selected Engineering Projects &amp; Systems</h2>
+        <p class="section-note">Production systems and open-source architectures demonstrating backend scalability, fault tolerance, and data engineering depth.</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <article class="project-card">
+          <div class="project-header">
+            <div>
+              <span class="project-domain">Fintech &amp; Digital Marketplace &middot; 2026–Present</span>
+              <h3>Serverless Event Ingestion &amp; High-Performance API Layer</h3>
+            </div>
+            <span class="badge-private">Commercial NDA | Global Financial Analytics Company</span>
+          </div>
+          <p class="project-summary">
+            <strong>Scope:</strong> High-throughput backend ingestion service and analytical data platform handling <strong>600k+ daily transactions</strong> with zero-idle compute and strict latency SLAs.
+          </p>
+          <div class="data-flow-box">
+            <span>Data Flow:</span> External Clients &rarr; AWS Lambda &amp; S3 &rarr; FastAPI (Async / Pydantic) &rarr; PostgreSQL / Cloud DWH &rarr; dbt &amp; Airflow &rarr; Prometheus / Grafana
+          </div>
+          <ul class="project-bullets">
+            <li><strong>Async Ingestion &amp; Serverless Compute:</strong> Engineered FastAPI event collection endpoints (<code>asyncio</code>, <code>Pydantic</code>, <code>uvicorn</code>, <code>aiobotocore</code>) paired with AWS Lambda and S3 raw sinks for seamless auto-scaling under burst traffic.</li>
+            <li><strong>Database &amp; API Optimization:</strong> Designed data access layers and tuned complex PostgreSQL/Cloud DWH queries (multi-table JOINs, CTEs, execution plan tuning via <code>EXPLAIN ANALYZE</code>, <code>Redis</code> cache-aside), cutting DB load by <strong>20%</strong> and reducing API response times from <strong>1.5s to &lt;200ms</strong>.</li>
+            <li><strong>ELT Orchestration:</strong> Built automated batch and streaming pipelines using Apache Airflow, dbt Core, and AWS Glue (<code>Pandas</code>) for raw event cataloging, deduplication, and downstream DWH modeling.</li>
+            <li><strong>Observability &amp; Quality Gates:</strong> Developed custom Python Airflow operators with structured JSON logging, Prometheus/Grafana metrics, <code>Sentry</code> error tracking, and automated CI/CD test suites (<code>pytest</code>, <code>dbt test</code> at <strong>80%+ coverage</strong>), cutting production incidents by <strong>15%</strong> and lowering MTTR.</li>
+          </ul>
+          <ul class="tag-list project-tags">
+            <li>Python</li><li>FastAPI</li><li>asyncio</li><li>Pydantic</li><li>PostgreSQL</li><li>Redis</li><li>AWS Lambda</li><li>Amazon S3</li><li>AWS Glue</li><li>Apache Airflow</li><li>dbt Core</li><li>Terraform</li><li>Prometheus &amp; Grafana</li><li>pytest</li>
+          </ul>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card">
+          <div class="project-header">
+            <div>
+              <span class="project-domain">Open-Source Architecture &middot; 2026</span>
+              <h3>Multi-Broker Data Platform — End-to-End DWH &amp; FastAPI Service</h3>
+            </div>
+            <a class="btn-outline" href="https://github.com/Lio-Kay/multi-broker-dwh" target="_blank" rel="noopener noreferrer">View on GitHub &rarr;</a>
+          </div>
+          <p class="project-summary">
+            <strong>Scope:</strong> Production-grade data infrastructure platform automating multi-source external API ingestion (CoinGecko, US Treasury, GitHub), layered Medallion transformations, and low-latency REST metric delivery.
+          </p>
+          <div class="data-flow-box">
+            <span>Data Flow:</span> External APIs &rarr; Airflow 3 (Asset Triggers) &rarr; PostgreSQL (Medallion DWH via dbt) &rarr; SQLAlchemy Core &rarr; FastAPI REST Layer
+          </div>
+          <ul class="project-bullets">
+            <li><strong>Low-Latency Read Layer:</strong> Built an asynchronous REST API using FastAPI, Pydantic, and <code>SQLAlchemy Core</code> over PostgreSQL (with <code>asyncpg</code> connection pooling and <code>Alembic</code> migrations) to serve analytical aggregates without ORM serialization overhead.</li>
+            <li><strong>Event-Driven Orchestration:</strong> Containerized Apache Airflow 3 (<code>Docker Compose</code>) utilizing asset-based cascade triggers, custom Python ingestion operators (<code>httpx</code>/<code>requests</code>, <code>Pandas</code>, exponential backoff), and Astronomer Cosmos for modular dbt execution.</li>
+            <li><strong>Layered DWH Architecture:</strong> Designed a Medallion DWH (Bronze &rarr; Silver &rarr; Gold) in PostgreSQL with incremental materializations and automated data retention policies (48h Bronze, 7d Silver, 28d Gold).</li>
+            <li><strong>CI/CD &amp; Data Quality Framework:</strong> Enforced automated schema contracts, uniqueness, freshness, and non-nullability constraints via <code>dbt test</code> and <code>pytest</code>.</li>
+          </ul>
+          <ul class="tag-list project-tags">
+            <li>Python</li><li>FastAPI</li><li>SQLAlchemy Core</li><li>Pydantic</li><li>PostgreSQL</li><li>Apache Airflow 3</li><li>Astronomer Cosmos</li><li>dbt Core</li><li>Pandas</li><li>Docker Compose</li><li>GitHub Actions</li><li>pytest</li>
+          </ul>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card">
+          <div class="project-header">
+            <div>
+              <span class="project-domain">Retail E-Commerce (2,000+ Stores) &middot; 2024–2026</span>
+              <h3>High-Availability E-Commerce &amp; Logistics Integration Bus</h3>
+            </div>
+            <span class="badge-private">Commercial NDA</span>
+          </div>
+          <p class="project-summary">
+            <strong>Scope:</strong> Asynchronous backend integration service bridging internal ERP systems with external delivery aggregators (Yandex Eats/Delivery API), unlocking a digital sales channel driving <strong>~10% of total company revenue</strong>.
+          </p>
+          <ul class="project-bullets">
+            <li><strong>Event-Driven State Sync:</strong> Engineered non-blocking message pipelines using RabbitMQ (<code>aio-pika</code> workers) and Django REST Framework to process high-volume order state transitions and inventory updates in real time.</li>
+            <li><strong>Fault Tolerance &amp; Idempotency:</strong> Mitigated flaky third-party network dependencies by implementing Dead-Letter Queues (DLQ), exponential backoff retries, rate-limiting, and idempotent PostgreSQL <code>UPSERT</code> updates for duplicate webhooks, achieving <strong>99.9% delivery reliability</strong>.</li>
+            <li><strong>Contract Validation &amp; Exchange Schemas:</strong> Defined strict OpenAPI specifications, Pydantic payload validators, and PostgreSQL + dbt data exchange views to eliminate order state desynchronization across vendors.</li>
+            <li><strong>Legacy Migration &amp; Deployment:</strong> Migrated legacy Java/SQL sync modules into containerized Python microservices (<code>Docker</code>, <code>pytest</code>, <code>GitLab CI/CD</code>) with end-to-end cross-system data validation.</li>
+          </ul>
+          <ul class="tag-list project-tags">
+            <li>Python</li><li>Django REST Framework</li><li>RabbitMQ</li><li>aio-pika</li><li>Celery</li><li>Pydantic</li><li>PostgreSQL</li><li>dbt Core</li><li>OpenAPI</li><li>Docker</li><li>pytest</li>
+          </ul>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="project-card">
+          <div class="project-header">
+            <div>
+              <span class="project-domain">Enterprise Data Platform (2,000+ Stores) &middot; 2024–2026</span>
+              <h3>High-Load Retail DWH &amp; Automated Competitor Intelligence</h3>
+            </div>
+            <span class="badge-private">Commercial NDA</span>
+          </div>
+          <p class="project-summary">
+            <strong>Scope:</strong> Centralized PostgreSQL Data Warehouse handling <strong>400M+ row fact tables</strong> for daily financial reconciliation across 2,000+ pharmacies, paired with an automated multi-platform pricing ingestion engine.
+          </p>
+          <ul class="project-bullets">
+            <li><strong>High-Volume PostgreSQL Tuning:</strong> Architected declarative table partitioning, composite/partial indexing, batch loading (<code>COPY</code> / bulk inserts), and window function optimizations to maintain strict daily SLA compliance on 400M+ row tables.</li>
+            <li><strong>Dimensional Modeling &amp; DQ:</strong> Built incremental dbt Core models (SCD Type 2 historical tracking, Kimball star schema) and automated Data Quality validation suites (<code>dbt test</code>, custom SQL reconciliation assertions) to match live ERP totals.</li>
+            <li><strong>Resilient Scraping Ingestion:</strong> Engineered distributed web-scraping pipelines across 6 competitor platforms using Python (<code>aiohttp</code>, <code>BeautifulSoup4</code>, <code>Selenium</code>) and <code>Pandas</code>, featuring automated DOM layout-drift detection and rate-limit handling.</li>
+          </ul>
+          <ul class="tag-list project-tags">
+            <li>Python</li><li>PostgreSQL (400M+ rows)</li><li>dbt Core (SCD2)</li><li>SQL Optimization</li><li>Table Partitioning</li><li>Pandas</li><li>aiohttp</li><li>BeautifulSoup4 &amp; Selenium</li><li>Docker</li>
+          </ul>
+        </article>
+
+        <!-- Project 5 -->
+        <article class="project-card">
+          <div class="project-header">
+            <div>
+              <span class="project-domain">Logistics &amp; Courier Network (CDEK Digital) &middot; 2022–2023</span>
+              <h3>Real-Time Kafka Streaming &amp; High-Throughput REST Microservices</h3>
+            </div>
+            <span class="badge-private">Commercial NDA</span>
+          </div>
+          <p class="project-summary">
+            <strong>Scope:</strong> Distributed backend services and real-time streaming pipelines across a <strong>15+ microservice architecture</strong> processing <strong>200k+ daily transactions</strong> for billing and parcel locker networks.
+          </p>
+          <ul class="project-bullets">
+            <li><strong>Kafka Event Streaming:</strong> Built real-time data pipelines using Apache Kafka (processing up to <strong>5k events/sec</strong>, consumer groups, offset management) and <code>Pandas</code> to synchronize core logistics, billing, and postmat state.</li>
+            <li><strong>Database Latency Reduction:</strong> Optimized high-traffic PostgreSQL read/write workloads via multi-table JOIN refactoring, window functions, batching, and index tuning, cutting ingestion and retrieval latency from <strong>~45 mins to &lt;2 mins</strong>.</li>
+            <li><strong>Microservice APIs:</strong> Developed and containerized <strong>40+ Django REST Framework endpoints</strong> with Docker, implementing rate-limiting, exponential backoff retries, and circuit-breaking logic for <strong>99%+ cross-service delivery reliability</strong>.</li>
+          </ul>
+          <ul class="tag-list project-tags">
+            <li>Python</li><li>Django REST Framework</li><li>Apache Kafka</li><li>PostgreSQL</li><li>Pandas</li><li>Microservices</li><li>Docker</li><li>REST APIs</li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- WHAT I FOCUS ON SECTION -->
+    <section id="focus" aria-labelledby="focus-title">
+      <h2 id="focus-title">Engineering &amp; Architecture Focus</h2>
+      <div class="focus-grid">
+        <div class="focus-item">
+          <h3>High-Throughput Backend &amp; APIs</h3>
+          <p>Designing asynchronous Python microservices (FastAPI, Django, asyncio), strict Pydantic/OpenAPI contracts, and low-latency SQLAlchemy Core data access layers built for high concurrency.</p>
+        </div>
+        <div class="focus-item">
+          <h3>Event-Driven Systems &amp; Messaging</h3>
+          <p>Building decoupled, fault-tolerant integrations with Apache Kafka, RabbitMQ, and Celery—enforcing idempotency, Dead-Letter Queues (DLQ), and exponential backoff retries.</p>
+        </div>
+        <div class="focus-item">
+          <h3>PostgreSQL Performance &amp; Layered DWH</h3>
+          <p>Scaling relational databases to 400M+ rows via table partitioning, index tuning, and EXPLAIN ANALYZE optimization, alongside Medallion/Kimball DWH modeling in dbt Core and Airflow.</p>
+        </div>
+        <div class="focus-item">
+          <h3>Production Reliability &amp; Observability</h3>
+          <p>Enforcing automated testing (pytest, dbt test, CI/CD gates), Infrastructure as Code (Terraform, Docker, AWS), and Prometheus/Grafana monitoring to protect SLAs and minimize MTTR.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPACT CONTACT SECTION -->
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact &amp; Links</h2>
+      <address class="contact-grid">
+        <a class="contact-card" href="mailto:ilyakopkovwork@gmail.com">
+          <span class="contact-label">Email</span>
+          <span class="contact-value">ilyakopkovwork@gmail.com</span>
+        </a>
+        <a class="contact-card" href="https://www.linkedin.com/in/ilia-kopkov/" target="_blank" rel="noopener noreferrer">
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-value">in/ilia-kopkov</span>
+        </a>
+        <a class="contact-card" href="https://t.me/Up_n_fwd" target="_blank" rel="noopener noreferrer">
+          <span class="contact-label">Telegram</span>
+          <span class="contact-value">@Up_n_fwd</span>
+        </a>
+        <a class="contact-card" href="https://api.whatsapp.com/send/?phone=34664307505" target="_blank" rel="noopener noreferrer">
+          <span class="contact-label">WhatsApp</span>
+          <span class="contact-value">+34 664 307 505</span>
+        </a>
+        <a class="contact-card" href="https://github.com/Lio-Kay" target="_blank" rel="noopener noreferrer">
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value">github.com/Lio-Kay</span>
+        </a>
+        <a class="contact-card" href="https://drive.google.com/file/d/1zULx1DXzTvTKFIctZ1Eq8Z9QIioHnjie/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+          <span class="contact-label">Resume (CV)</span>
+          <span class="contact-value">Google Drive</span>
+        </a>
+      </address>
+    </section>
+
+  </main>
+</body>
+</html>

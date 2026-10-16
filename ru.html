@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Илья Копков">
+  <meta name="description" content="Илья Копков — Backend & Data Infrastructure Engineer: высоконагруженные API на Python, оптимизация PostgreSQL, брокеры сообщений и ELT-пайплайны.">
+  <title>Илья Копков | Backend & Data Infrastructure Engineer</title>
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="icon" type="image/gif" href="static/Favicon.gif">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Илья Копков | Backend & Data Infrastructure Engineer">
+  <meta property="og:description" content="Высоконагруженные микросервисы на Python (FastAPI, Django), event-driven архитектура (Kafka, RabbitMQ), оптимизация PostgreSQL (400M+ строк) и облачная инфраструктура AWS/dbt/Airflow.">
+  <meta property="og:image" content="https://lio-kay.github.io/static/og-preview.png">
+  <meta property="og:url" content="https://lio-kay.github.io/ru.html">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ilia Kopkov",
+    "jobTitle": "Backend & Data Infrastructure Engineer",
+    "url": "https://lio-kay.github.io/ru.html",
+    "sameAs": [
+      "https://www.linkedin.com/in/ilia-kopkov/",
+      "https://github.com/Lio-Kay"
+    ],
+    "knowsAbout": [
+      "Python", "FastAPI", "Django", "PostgreSQL", "Apache Kafka", "RabbitMQ", "dbt", "Apache Airflow", "AWS", "Docker", "Terraform"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Asturias",
+      "addressCountry": "Spain"
+    }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Перейти к основному контенту</a>
+
+  <header class="site-header">
+    <nav aria-label="Основная навигация" class="container nav-wrap">
+      <a href="#hero" class="nav-brand">Илья Копков</a>
+      <ul class="nav-list">
+        <li><a href="#stack">Стек</a></li>
+        <li><a href="#projects">Проекты</a></li>
+        <li><a href="#focus">Архитектура</a></li>
+        <li><a href="#contact">Контакты</a></li>
+        <li class="lang-switcher">
+          <a href="index.html" onclick="localStorage.setItem('site_lang','en')">EN</a>
+          <span class="lang-sep">/</span>
+          <a href="ru.html" class="active-lang" onclick="localStorage.setItem('site_lang','ru')">RU</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content" class="container">
+
+    <!-- HERO SECTION -->
+    <section id="hero" aria-labelledby="hero-title" class="hero-section">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <p class="hero-eyebrow">Астурия, Испания (ЕС) &middot; Открыт к B2B / ГПХ (СЗ/ИП) контрактам</p>
+          <h1 id="hero-title">Илья Копков</h1>
+          <h2 class="hero-role">Backend &amp; Data Infrastructure Engineer</h2>
+          <p class="hero-subtitle">
+            Более 4 лет опыта проектирования отказоустойчивых бэкенд-сервисов на Python (FastAPI, Django, asyncio), событийно-ориентированных интеграций (Kafka, RabbitMQ) и платформ данных (PostgreSQL, dbt Core, Apache Airflow, AWS) в финтехе, ритейле и логистике.
+          </p>
+          <div class="hero-actions">
+            <a class="btn-primary" href="https://docs.google.com/document/d/1qR6ZTiW5NEEgc8THVeMUp927d_JaAaGRy-f9EoRHEeE/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
+              Скачать резюме
+            </a>
+            <a class="btn-secondary" href="https://github.com/Lio-Kay" target="_blank" rel="noopener noreferrer">
+              GitHub Профиль
+            </a>
+          </div>
+        </div>
+        <figure class="hero-photo-template">
+          <img src="static/PFP_Square.png" alt="Илья Копков">
+        </figure>
+      </div>
+
+      <!-- KEY IMPACT METRICS BAR -->
+      <div class="metrics-bar" aria-label="Ключевые инженерные метрики">
+        <div class="metric-item">
+          <span class="metric-value">600k+</span>
+          <span class="metric-label">Транзакций и событий в сутки</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-value">400M+</span>
+          <span class="metric-label">Строк в таблицах фактов PostgreSQL</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-value">&lt;200ms</span>
+          <span class="metric-label">Время ответа оптимизированных API</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-value">~10%</span>
+          <span class="metric-label">Выручки ритейла через async-шину</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECH STACK SECTION -->
+    <section id="stack" aria-labelledby="stack-title">
+      <h2 id="stack-title">Технологический стек</h2>
+      <div class="stack-grid">
+        <div class="stack-group">
+          <h3>Backend &amp; API</h3>
+          <ul class="tag-list">
+            <li>Python 3.11+</li>
+            <li>FastAPI</li>
+            <li>Django / DRF</li>
+            <li>asyncio / aiohttp</li>
+            <li>Pydantic v2</li>
+            <li>SQLAlchemy Core &amp; ORM</li>
+            <li>Alembic</li>
+            <li>REST / OpenAPI</li>
+          </ul>
+        </div>
+        <div class="stack-group">
+          <h3>Базы данных &amp; Кэширование</h3>
+          <ul class="tag-list">
+            <li>PostgreSQL (Партиционирование)</li>
+            <li>EXPLAIN ANALYZE</li>
+            <li>Оконные функции &amp; CTE</li>
+            <li>Redis (Кэш / Локи)</li>
+            <li>Amazon S3 / Parquet</li>
+            <li>asyncpg / psycopg2</li>
+          </ul>
+        </div>
+        <div class="stack-group">
+          <h3>Брокеры &amp; Инфраструктура данных</h3>
+          <ul class="tag-list">
+            <li>Apache Kafka</li>
+            <li>RabbitMQ</li>
+            <li>Celery</li>
+            <li>dbt Core (SCD2, Medallion)</li>
+            <li>Apache Airflow 3</li>
+            <li>AWS Glue</li>
+            <li>Pandas / PyArrow</li>
+          </ul>
+        </div>
+        <div class="stack-group">
+          <h3>DevOps, Тестирование &amp; Мониторинг</h3>
+          <ul class="tag-list">
+            <li>Docker &amp; Compose</li>
+            <li>AWS (Lambda, S3, IAM)</li>
+            <li>Terraform (IaC)</li>
+            <li>CI/CD (GitHub Actions / GitLab)</li>
+            <li>pytest (Unit &amp; Integration)</li>
+            <li>dbt test</li>
+            <li>Prometheus &amp; Grafana</li>
+            <li>Linux</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" aria-labelledby="projects-title">
+      <div class="section-header">
+        <h2 id="projects-title">Избранные инженерные проекты и системы</h2>
+        <p class="section-note">Продуктовые системы и архитектуры, демонстрирующие масштабируемость бэкенда, отказоустойчивость и глубину работы с данными.</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <article class="project-card">
+          <div class="project-header">
+            <div>
+              <span class="project-domain">Финтех и цифровая торговая площадка &middot; 2026–н.в.</span>
+              <h3>Серверсный пайплайн ингестии и высокопроизводительный API-слой</h3>
+            </div>
+            <span class="badge-private">Коммерческий NDA | Global Financial Analytics Company</span>
+          </div>
+          <p class="project-summary">
+            <strong>Масштаб:</strong> Высоконагруженный бэкенд сбора событий и аналитическая платформа, обрабатывающие <strong>600k+ транзакций в сутки</strong> в режиме serverless с нулевым простоем.
+          </p>
+          <div class="data-flow-box">
+            <span>Поток данных:</span> Внешние клиенты &rarr; AWS Lambda &amp; S3 &rarr; FastAPI (Async / Pydantic) &rarr; PostgreSQL / Cloud DWH &rarr; dbt &amp; Airflow &rarr; Prometheus / Grafana
+          </div>
+          <ul class="project-bullets">
+            <li><strong>Асинхронная ингестия:</strong> Разработал эндпоинты сбора событий на FastAPI (<code>asyncio</code>, <code>Pydantic</code>, <code>uvicorn</code>, <code>aiobotocore</code>) в связке с AWS Lambda и S3 для автоматического масштабирования под пирками трафика.</li>
+            <li><strong>Оптимизация БД и API:</strong> Спроектировал слои доступа и оптимизировал сложные SQL-запросы в PostgreSQL/Cloud DWH (сложные JOIN, CTE, тюнинг планов выполнения через <code>EXPLAIN ANALYZE</code>, кэширование в <code>Redis</code>), снизив нагрузку на БД на <strong>20%</strong> и сократив отклик API с <strong>1.5 с до &lt;200 мс</strong>.</li>
+            <li><strong>Оркестрация ELT:</strong> Построил автоматизированные пакетные и потоковые пайплайны на Apache Airflow, dbt Core и AWS Glue (<code>Pandas</code>) для каталогизации сырых событий и трансформации в витрины.</li>
+            <li><strong>Наблюдаемость и качество:</strong> Внедрил кастомные операторы Airflow со структурированным логированием, метрики Prometheus/Grafana, трекинг ошибок <code>Sentry</code> и автотесты (<code>pytest</code>, <code>dbt test</code> с покрытием <strong>80%+</strong>), снизив инциденты на <strong>15%</strong> и сократив MTTR.</li>
+          </ul>
+          <ul class="tag-list project-tags">
+            <li>Python</li><li>FastAPI</li><li>asyncio</li><li>Pydantic</li><li>PostgreSQL</li><li>Redis</li><li>AWS Lambda</li><li>Amazon S3</li><li>AWS Glue</li><li>Apache Airflow</li><li>dbt Core</li><li>Terraform</li><li>Prometheus &amp; Grafana</li><li>pytest</li>
+          </ul>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card">
+          <div class="project-header">
+            <div>
+              <span class="project-domain">Open-Source Архитектура &middot; 2026</span>
+              <h3>Платформа данных Multi-Broker — DWH и FastAPI сервис</h3>
+            </div>
+            <a class="btn-outline" href="https://github.com/Lio-Kay/multi-broker-dwh" target="_blank" rel="noopener noreferrer">Открыть GitHub &rarr;</a>
+          </div>
+          <p class="project-summary">
+            <strong>Масштаб:</strong> Production-ready платформа данных с автоматизацией сбора API из внешних источников (CoinGecko, US Treasury, GitHub), многоуровневыми трансформациями Medallion и быстрой доставкой метрик.
+          </p>
+          <div class="data-flow-box">
+            <span>Поток данных:</span> Внешние API &rarr; Airflow 3 (Asset Triggers) &rarr; PostgreSQL (Medallion DWH через dbt) &rarr; SQLAlchemy Core &rarr; FastAPI REST Layer
+          </div>
+          <ul class="project-bullets">
+            <li><strong>Быстрый слой чтения:</strong> Реализовал асинхронный REST API на FastAPI, Pydantic и <code>SQLAlchemy Core</code> поверх PostgreSQL (с пулом соединений <code>asyncpg</code> и миграциями <code>Alembic</code>) без оверхеда ORM.</li>
+            <li><strong>Событийная оркестрация:</strong> Контейнеризировал Apache Airflow 3 (<code>Docker Compose</code>) на основе триггеров по датасетам, написал кастомные операторы с экспоненциальным бэкоффом (<code>httpx</code>, <code>Pandas</code>) и связал с Astronomer Cosmos.</li>
+            <li><strong>Слоистая архитектура DWH:</strong> Спроектировал Medallion DWH (Bronze &rarr; Silver &rarr; Gold) в PostgreSQL с инкрементальными материализациями и правилами хранения (48ч Bronze, 7д Silver, 28д Gold).</li>
+            <li><strong>CI/CD и Data Quality:</strong> Настроил автоматическую проверку контрактов данных, уникальности и свежести через <code>dbt test</code> и <code>pytest</code> в GitHub Actions.</li>
+          </ul>
+          <ul class="tag-list project-tags">
+            <li>Python</li><li>FastAPI</li><li>SQLAlchemy Core</li><li>Pydantic</li><li>PostgreSQL</li><li>Apache Airflow 3</li><li>Astronomer Cosmos</li><li>dbt Core</li><li>Pandas</li><li>Docker Compose</li><li>GitHub Actions</li><li>pytest</li>
+          </ul>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card">
+          <div class="project-header">
+            <div>
+              <span class="project-domain">Ритейл-электронная коммерция (2000+ аптек) &middot; 2024–2026</span>
+              <h3>Интеграционная шина для e-commerce и доставки</h3>
+            </div>
+            <span class="badge-private">Коммерческий NDA</span>
+          </div>
+          <p class="project-summary">
+            <strong>Масштаб:</strong> Асинхронный сервис интеграции внутренних ERP-систем с агрегаторами доставки (Yandex Eats/Delivery API), открывший цифровой канал с доходом <strong>~10% от общей выручки компании</strong>.
+          </p>
+          <ul class="project-bullets">
+            <li><strong>Асинхронная синхронизация:</strong> Создал неблокирующие пайплайны обработки сообщений на RabbitMQ (воркеры <code>aio-pika</code>) и Django REST Framework для передачи статусов заказов и остатков в реальном времени.</li>
+            <li><strong>Отказоустойчивость и идемпотентность:</strong> Нивелировал нестабильность сторонних API за счет Dead-Letter Queues (DLQ), повторов с экспоненциальной задержкой, лимитирования запросов и идемпотентных <code>UPSERT</code> в PostgreSQL, достигнув <strong>99.9% надежности доставки</strong>.</li>
+            <li><strong>Валидация контрактов:</strong> Описал спецификации OpenAPI, валидаторы Pydantc и обменные SQL-представления с dbt для исключения расхождений статусов заказов между вендорами.</li>
+            <li><strong>Миграция легаси:</strong> Переписал устаревшие Java/SQL модули на современные Python-сервисы (<code>Docker</code>, <code>pytest</code>, <code>GitLab CI/CD</code>) с межсистемной валидацией.</li>
+          </ul>
+          <ul class="tag-list project-tags">
+            <li>Python</li><li>Django REST Framework</li><li>RabbitMQ</li><li>aio-pika</li><li>Celery</li><li>Pydantic</li><li>PostgreSQL</li><li>dbt Core</li><li>OpenAPI</li><li>Docker</li><li>pytest</li>
+          </ul>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="project-card">
+          <div class="project-header">
+            <div>
+              <span class="project-domain">Корпоративная платформа данных (2000+ аптек) &middot; 2024–2026</span>
+              <h3>Высоконагруженный DWH ритейла и парсинг конкурентов</h3>
+            </div>
+            <span class="badge-private">Коммерческий NDA</span>
+          </div>
+          <p class="project-summary">
+            <strong>Масштаб:</strong> Централизованное хранилище данных PostgreSQL с таблицами фактов на <strong>400M+ строк</strong> для ежедневной финансовой сверки 2000+ аптек и автоматизированный движок сбора цен.
+          </p>
+          <ul class="project-bullets">
+            <li><strong>Тюнинг PostgreSQL:</strong> Спроектировал декларативное секционирование таблиц, составные индексы, пакетную загрузку (<code>COPY</code>) и оконные функции для поддержания жестких SLA на таблицах с 400M+ строк.</li>
+            <li><strong>Моделирование и DQ:</strong> Создал инкрементальные модели dbt Core (SCD Type 2 историчность, звезда Кимбалла) и контуры проверки Data Quality (<code>dbt test</code>, SQL-ассерты) для сверки с ERP.</li>
+            <li><strong>Парсинг цен:</strong> Разработал распределенные краулеры по 6 сайтам конкурентов на Python (<code>aiohttp</code>, <code>BeautifulSoup4</code>, <code>Selenium</code>) и <code>Pandas</code> с защитой от изменения верстки (layout-drift).</li>
+          </ul>
+          <ul class="tag-list project-tags">
+            <li>Python</li><li>PostgreSQL (400M+ строк)</li><li>dbt Core (SCD2)</li><li>SQL Optimization</li><li>Table Partitioning</li><li>Pandas</li><li>aiohttp</li><li>BeautifulSoup4 &amp; Selenium</li><li>Docker</li>
+          </ul>
+        </article>
+
+        <!-- Project 5 -->
+        <article class="project-card">
+          <div class="project-header">
+            <div>
+              <span class="project-domain">Логистика и курьерская сеть (CDEK Digital) &middot; 2022–2023</span>
+              <h3>Real-Time стриминг на Kafka и REST-микросервисы</h3>
+            </div>
+            <span class="badge-private">Коммерческий NDA</span>
+          </div>
+          <p class="project-summary">
+            <strong>Масштаб:</strong> Распределенные бэкенд-сервисы и потоковые пайплайны в архитектуре из <strong>15+ микросервисов</strong>, обрабатывающие <strong>200k+ транзакций в сутки</strong> для биллинга и постаматов.
+          </p>
+          <ul class="project-bullets">
+            <li><strong>Потоковая обработка Kafka:</strong> Построил пайплайны реального времени на Apache Kafka (до <strong>5k событий/сек</strong>, консьюмер-группы, управление офсетами) и <code>Pandas</code> для синхронизации состояний логистики.</li>
+            <li><strong>Ускорение базы данных:</strong> Оптимизировал высоконагруженные запросы чтения/записи в PostgreSQL через рефакторинг JOIN, оконные функции и тюнинг индексов, сократив задержку с <strong>~45 минут до &lt;2 минут</strong>.</li>
+            <li><strong>Микросервисные API:</strong> Разработал <strong>40+ эндпоинтов на Django REST Framework</strong> в Docker, внедрив ограничение частоты запросов, ретраи и fail-safe логику для обеспечения <strong>99%+ надежности доставки</strong>.</li>
+          </ul>
+          <ul class="tag-list project-tags">
+            <li>Python</li><li>Django REST Framework</li><li>Apache Kafka</li><li>PostgreSQL</li><li>Pandas</li><li>Microservices</li><li>Docker</li><li>REST APIs</li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- WHAT I FOCUS ON SECTION -->
+    <section id="focus" aria-labelledby="focus-title">
+      <h2 id="focus-title">Архитектурный фокус</h2>
+      <div class="focus-grid">
+        <div class="focus-item">
+          <h3>Высоконагруженный бэкенд и API</h3>
+          <p>Проектирование асинхронных микросервисов на Python (FastAPI, Django, asyncio), строгих контрактов Pydantic/OpenAPI и низкоуровневых слоев доступа на SQLAlchemy Core.</p>
+        </div>
+        <div class="focus-item">
+          <h3>Событийно-ориентированные системы</h3>
+          <p>Построение отказоустойчивых интеграций на Apache Kafka, RabbitMQ и Celery с гарантией идемпотентности, обработкой Dead-Letter Queues (DLQ) и экспоненциальными ретраями.</p>
+        </div>
+        <div class="focus-item">
+          <h3>Производительность PostgreSQL и DWH</h3>
+          <p>Масштабирование баз до 400M+ строк через секционирование и индексы, а также построение слоистых DWH (Medallion/Kimball) с помощью dbt Core и Airflow.</p>
+        </div>
+        <div class="focus-item">
+          <h3>Надежность и наблюдаемость</h3>
+          <p>Внедрение автотестирования (pytest, dbt test, CI/CD), инфраструктуры как кода (Terraform, Docker, AWS) и мониторинга Prometheus/Grafana для защиты SLA и снижения MTTR.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPACT CONTACT SECTION -->
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Контакты и ссылки</h2>
+      <address class="contact-grid">
+        <a class="contact-card" href="mailto:ilyakopkovwork@gmail.com">
+          <span class="contact-label">Email</span>
+          <span class="contact-value">ilyakopkovwork@gmail.com</span>
+        </a>
+        <a class="contact-card" href="https://www.linkedin.com/in/ilia-kopkov/" target="_blank" rel="noopener noreferrer">
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-value">in/ilia-kopkov</span>
+        </a>
+        <a class="contact-card" href="https://t.me/Up_n_fwd" target="_blank" rel="noopener noreferrer">
+          <span class="contact-label">Telegram</span>
+          <span class="contact-value">@Up_n_fwd</span>
+        </a>
+        <a class="contact-card" href="https://api.whatsapp.com/send/?phone=34664307505" target="_blank" rel="noopener noreferrer">
+          <span class="contact-label">WhatsApp</span>
+          <span class="contact-value">+7 983 307 88 79</span>
+        </a>
+        <a class="contact-card" href="https://github.com/Lio-Kay" target="_blank" rel="noopener noreferrer">
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value">github.com/Lio-Kay</span>
+        </a>
+        <a class="contact-card" href="https://docs.google.com/document/d/1qR6ZTiW5NEEgc8THVeMUp927d_JaAaGRy-f9EoRHEeE/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
+          <span class="contact-label">Резюме</span>
+          <span class="contact-value">Скачать</span>
+        </a>
+      </address>
+    </section>
+
+  </main>
+</body>
+</html>
